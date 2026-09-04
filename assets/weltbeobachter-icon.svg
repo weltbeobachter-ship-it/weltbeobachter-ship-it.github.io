@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-labelledby="title desc">
+  <title id="title">Weltbeobachter</title>
+  <desc id="desc">Abstrakte Kompassmarke mit korallenfarbenem Mittelpunkt</desc>
+  <rect width="192" height="192" rx="42" fill="#0a1923"/>
+  <circle cx="96" cy="96" r="61" fill="none" stroke="#f4efe6" stroke-width="7"/>
+  <circle cx="96" cy="96" r="43" fill="none" stroke="#f4efe6" stroke-opacity=".38" stroke-width="3"/>
+  <path d="M96 22v44M96 126v44M22 96h44M126 96h44" stroke="#f4efe6" stroke-width="7" stroke-linecap="round"/>
+  <path d="M96 52l12 32 32 12-32 12-12 32-12-32-32-12 32-12z" fill="#f4efe6" fill-opacity=".15"/>
+  <circle cx="96" cy="96" r="13" fill="#ff6f61"/>
+</svg>
