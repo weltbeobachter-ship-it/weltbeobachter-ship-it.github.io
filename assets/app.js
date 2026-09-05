@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "schafwolle-gletscher-tsanfleuron-experiment-2026",
+    url: "/wissenschaft/schafwolle-gletscher-tsanfleuron-experiment-2026",
+    category: "Wissenschaft",
+    title: "Schafwolle schützt kleine Gletscher-Testflächen – Auswertung offen",
+    summary:
+      "Zwei Wollabdeckungen wirkten nach ersten Beobachtungen ähnlich wie Kunststoff-Geotextil. Der Versuch ist klein, die Datenanalyse steht noch aus.",
+    tone: "science",
+    glyph: "✦",
+    image: "/assets/schafwolle-gletscher-experiment-2026-editorial.webp",
+    imageAlt: "Illustration eines kleinen Gletscher-Testfelds mit zwei Wolldecken und einer weißen Vergleichsfolie",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "05.09.2026",
+    readTime: "6 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "foxconn-rekordumsatz-august-2026-ki-server",
     url: "/technologie/foxconn-rekordumsatz-august-2026-ki-server",
     category: "Technologie",
