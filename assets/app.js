@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "isar-aerospace-spectrum-orbit-2026",
+    url: "/technologie/isar-aerospace-spectrum-orbit-2026",
+    category: "Technologie",
+    title: "Isar Aerospace erreicht mit Spectrum erstmals den Orbit",
+    summary:
+      "Die deutsche Trägerrakete brachte von Norwegen aus fünf CubeSats und ein Experiment in eine Erdumlaufbahn. Was der Erfolg bedeutet.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/isar-aerospace-spectrum-orbit-2026-editorial.webp",
+    imageAlt: "Illustration einer kleinen Rakete über einem arktischen Küstenstartplatz mit Satelliten auf einer Umlaufbahn",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "06.09.2026",
+    readTime: "6 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "schafwolle-gletscher-tsanfleuron-experiment-2026",
     url: "/wissenschaft/schafwolle-gletscher-tsanfleuron-experiment-2026",
     category: "Wissenschaft",
