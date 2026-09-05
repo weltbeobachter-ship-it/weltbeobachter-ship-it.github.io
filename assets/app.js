@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "foxconn-rekordumsatz-august-2026-ki-server",
+    url: "/technologie/foxconn-rekordumsatz-august-2026-ki-server",
+    category: "Technologie",
+    title: "Foxconn meldet August-Rekord – KI-Server treiben Umsatz",
+    summary:
+      "Der Elektronikfertiger erreicht 921,8 Milliarden Taiwan-Dollar und erwartet ein starkes drittes Quartal. Was die Monatszahl noch nicht zeigt.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/foxconn-rekordumsatz-august-2026-editorial.webp",
+    imageAlt: "Illustration einer menschenleeren Elektronikfertigung mit KI-Servern, Kühlleitungen und abstrakten Datenlinien",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "05.09.2026",
+    readTime: "6 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "sydney-fruehlingshitze-brandgefahr-2026",
     url: "/klima/sydney-fruehlingshitze-extreme-brandgefahr-2026",
     category: "Klima",
