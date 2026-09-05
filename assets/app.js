@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "sydney-fruehlingshitze-brandgefahr-2026",
+    url: "/klima/sydney-fruehlingshitze-extreme-brandgefahr-2026",
+    category: "Klima",
+    title: "Sydney: Totales Feuerverbot bei extremer Brandgefahr",
+    summary:
+      "Ungewöhnliche Frühlingshitze, trockene Luft und böiger Wind treiben die Feuergefahr im Großraum Sydney auf die zweithöchste Warnstufe.",
+    tone: "climate",
+    glyph: "☀",
+    image: "/assets/sydney-fruehlingshitze-brandgefahr-2026-editorial.webp",
+    imageAlt: "Illustration des Sydney Harbour bei heißem, windigem Frühlingswetter mit trockenem Buschland und abstraktem Warnsymbol",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "05.09.2026",
+    readTime: "6 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "volkswagen-zukunftsplan-2030-2026",
     url: "/wirtschaft/volkswagen-zukunftsplan-2030-50000-stellen-werke",
     category: "Wirtschaft",
