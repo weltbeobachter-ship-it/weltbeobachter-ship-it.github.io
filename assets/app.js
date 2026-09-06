@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "saporischschja-feuerpause-stromleitung-reparatur-2026",
+    url: "/energie/saporischschja-feuerpause-stromleitung-reparatur-2026",
+    category: "Energie",
+    title: "Saporischschja: Lokale Feuerpause ermöglicht Reparaturen",
+    summary:
+      "Das AKW läuft seit dem 20. August ohne Netzstrom. Unter einer IAEA-vermittelten Feuerpause haben Reparaturen an der externen Stromversorgung begonnen.",
+    tone: "energy",
+    glyph: "↯",
+    image: "/assets/saporischschja-feuerpause-stromleitung-reparatur-2026-editorial.webp",
+    imageAlt: "Neutrale Illustration eines Kernkraftwerks an einem Fluss mit unterbrochener und wieder verbundener Stromleitung",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "06.09.2026",
+    readTime: "6 Min.",
+    verified: "IAEA + 2 Medien"
+  },
+  {
     id: "anak-krakatau-jakarta-flugausfaelle-2026",
     url: "/wissenschaft/anak-krakatau-jakarta-flugausfaelle-2026",
     category: "Wissenschaft",
