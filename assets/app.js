@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "suedkorea-exportrekord-halbleiter-2026",
+    url: "/wirtschaft/suedkorea-exportrekord-halbleiter-2026",
+    category: "Wirtschaft",
+    title: "Südkorea übertrifft Exportrekord – Chips treiben den Boom",
+    summary:
+      "Die Ausfuhren erreichen schon Anfang September 709,4 Milliarden Dollar. Halbleiter stehen für rund 41 Prozent – die Autoexporte schwächeln.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/suedkorea-exportrekord-halbleiter-2026-editorial.webp",
+    imageAlt: "Illustration eines Containerhafens mit Siliziumwafer und Speicherchip als Symbol für Südkoreas Exportboom",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "06.09.2026",
+    readTime: "6 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "isar-aerospace-spectrum-orbit-2026",
     url: "/technologie/isar-aerospace-spectrum-orbit-2026",
     category: "Technologie",
