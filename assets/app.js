@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "anak-krakatau-jakarta-flugausfaelle-2026",
+    url: "/wissenschaft/anak-krakatau-jakarta-flugausfaelle-2026",
+    category: "Wissenschaft",
+    title: "Anak Krakatau: Vulkanasche stört Flugbetrieb in Jakarta",
+    summary:
+      "209 Flugbewegungen waren von einer zeitweisen Sperre betroffen. Zwei Aschewolken zogen in unterschiedlichen Höhen über Westindonesien.",
+    tone: "science",
+    glyph: "✦",
+    image: "/assets/anak-krakatau-jakarta-flugausfaelle-2026-editorial.webp",
+    imageAlt: "Illustration des Anak Krakatau mit Aschewolke und einem abgestellten Flugzeug auf einer leeren Startbahn",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "06.09.2026",
+    readTime: "6 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "suedkorea-exportrekord-halbleiter-2026",
     url: "/wirtschaft/suedkorea-exportrekord-halbleiter-2026",
     category: "Wirtschaft",
