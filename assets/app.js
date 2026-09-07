@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "frankreich-rekordsommer-2026-hitze-duerre",
+    url: "/klima/frankreich-rekordsommer-2026-hitze-duerre",
+    category: "Klima",
+    title: "Frankreich erlebt heißesten Sommer seit 1900",
+    summary:
+      "Frankreichs Mitteltemperatur lag bei 24,0 Grad. 53 Hitzewellentage und knapp 40 Prozent Regenminus markieren eine außergewöhnliche Saison.",
+    tone: "climate",
+    glyph: "☀",
+    image: "/assets/frankreich-rekordsommer-2026-editorial.webp",
+    imageAlt: "Redaktionelle Illustration einer von Hitze geprägten Frankreichkarte über trockenem, rissigem Boden",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "07.09.2026",
+    readTime: "6 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "saporischschja-feuerpause-stromleitung-reparatur-2026",
     url: "/energie/saporischschja-feuerpause-stromleitung-reparatur-2026",
     category: "Energie",
