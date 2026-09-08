@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "mistral-series-d-2026",
+    url: "/technologie/mistral-3-milliarden-euro-bewertung-21-milliarden-2026",
+    category: "Technologie",
+    title: "Mistral sammelt 3 Milliarden Euro ein – Bewertung steigt auf mehr als 21 Milliarden",
+    summary:
+      "Samsung führt Europas bislang größte private Tech-Finanzierungsrunde an. Das Geld soll vor allem in KI-Forschung, Rechenleistung und Expansion fließen.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/mistral-ki-rechenzentrum-server.webp",
+    imageAlt: "Nahaufnahme beleuchteter Serverracks in einem Rechenzentrum",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "08.09.2026",
+    readTime: "8 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "japan-bip-zweites-quartal-2026",
     url: "/wirtschaft/japan-bip-zweites-quartal-1-4-prozent-2026",
     category: "Wirtschaft",
