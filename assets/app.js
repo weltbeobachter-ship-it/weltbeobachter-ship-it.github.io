@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "japan-bip-zweites-quartal-2026",
+    url: "/wirtschaft/japan-bip-zweites-quartal-1-4-prozent-2026",
+    category: "Wirtschaft",
+    title: "Japans BIP wächst um 0,4 Prozent – Jahresrate auf 1,4 Prozent revidiert",
+    summary:
+      "Die zweite Schätzung fällt etwas stärker aus als die erste. Unternehmensinvestitionen wurden nach oben korrigiert, der private Konsum stagnierte.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/japan-wirtschaft-yokohama-hafen.webp",
+    imageAlt: "Blick über Containeranlagen im Hafen von Yokohama auf die Yokohama Bay Bridge",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "08.09.2026",
+    readTime: "7 Min.",
+    verified: "5 Quellen geprüft"
+  },
+  {
     id: "cathay-google-ki-kondensstreifen-2026",
     url: "/klima/cathay-google-ki-kondensstreifen-vermeidung-2026",
     category: "Klima",
