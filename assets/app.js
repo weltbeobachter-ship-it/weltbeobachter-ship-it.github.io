@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "eib-prinzessin-elisabeth-energieinsel-2026",
+    url: "/energie/eib-1-milliarde-euro-prinzessin-elisabeth-energieinsel-2026",
+    category: "Energie",
+    title: "EIB stellt 1 Milliarde Euro für Belgiens Energieinsel bereit",
+    summary:
+      "Der Kredit finanziert Hochspannungstechnik und Netzanbindung. Die ersten neuen Windparks sind ab 2031 vorgesehen; mehrere Zeit- und Kostenfragen bleiben offen.",
+    tone: "energy",
+    glyph: "↯",
+    image: "/assets/prinzessin-elisabeth-energieinsel-nordsee.webp",
+    imageAlt: "Sechs Offshore-Windräder im belgischen Teil der Nordsee",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "09.09.2026",
+    readTime: "7 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "mistral-series-d-2026",
     url: "/technologie/mistral-3-milliarden-euro-bewertung-21-milliarden-2026",
     category: "Technologie",
