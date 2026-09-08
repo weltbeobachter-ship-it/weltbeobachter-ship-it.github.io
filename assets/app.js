@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "cathay-google-ki-kondensstreifen-2026",
+    url: "/klima/cathay-google-ki-kondensstreifen-vermeidung-2026",
+    category: "Klima",
+    title: "Cathay und Google testen KI gegen Kondensstreifen – Klimanutzen noch offen",
+    summary:
+      "Mehr als 80 Flüge folgten bisher Ausweichrouten. Die gemeldeten 40 Prozent weniger Kondensstreifen-Erwärmung sind eine Google-Schätzung, kein unabhängiger Endnachweis.",
+    tone: "climate",
+    glyph: "≈",
+    image: "/assets/kondensstreifen-nordsee-envisat.webp",
+    imageAlt: "Envisat-Satellitenaufnahme der Nordsee mit zahlreichen Kondensstreifen zwischen England, Belgien und den Niederlanden",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "08.09.2026",
+    readTime: "8 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "terrapower-natrium-grossbritannien-2034",
     url: "/energie/terrapower-natrium-reaktor-grossbritannien-2034",
     category: "Energie",
