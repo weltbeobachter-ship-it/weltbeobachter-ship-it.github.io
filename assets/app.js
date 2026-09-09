@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "meta-muse-ki-agent-2026",
+    url: "/technologie/meta-muse-ki-agent-usa-whatsapp-2026",
+    category: "Technologie",
+    title: "Meta startet KI-Agenten Muse in den USA – Europa-Termin offen",
+    summary:
+      "Muse soll E-Mails senden, Reisen buchen und Einkäufe ausführen. Meta verspricht Schutzmechanismen; unabhängige Berichte zeigen zugleich offene Sicherheitsfragen.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/meta-muse-ki-agent-serverracks.webp",
+    imageAlt: "Beleuchtete Serverracks in einem Computerraum des NOIRLab in Tucson",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "09.09.2026",
+    readTime: "8 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "deutsche-exporte-juli-2026",
     url: "/wirtschaft/deutsche-exporte-juli-2026-usa-china",
     category: "Wirtschaft",
