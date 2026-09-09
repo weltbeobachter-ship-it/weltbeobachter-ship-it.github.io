@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "deutsche-exporte-juli-2026",
+    url: "/wirtschaft/deutsche-exporte-juli-2026-usa-china",
+    category: "Wirtschaft",
+    title: "Deutsche Exporte sinken im Juli – starke Unterschiede bei USA und China",
+    summary:
+      "Die Ausfuhren gaben zum Vormonat um 0,8 Prozent nach. Das kräftige US-Plus traf auf deutliche Rückgänge im Geschäft mit China und Großbritannien.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/deutsche-exporte-hamburg-containerterminal.webp",
+    imageAlt: "Containerbrücken und Frachtschiffe am Terminal Tollerort im Hamburger Hafen",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "09.09.2026",
+    readTime: "7 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "eib-prinzessin-elisabeth-energieinsel-2026",
     url: "/energie/eib-1-milliarde-euro-prinzessin-elisabeth-energieinsel-2026",
     category: "Energie",
