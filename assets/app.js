@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "apple-event-september-2026",
+    url: "/technologie/apple-event-9-september-2026-iphone",
+    category: "Technologie",
+    title: "iPhone Duo vorgestellt: Falt-iPhone kostet in Deutschland ab 2.299 Euro",
+    summary:
+      "Apples erstes faltbares iPhone startet in Deutschland am 23. Oktober. Bestätigt sind Preis, Displays und A20 Pro; Alltagshaltbarkeit und deutsche Siri-AI bleiben offen.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/apple-iphone-duo-steve-jobs-theater.webp",
+    imageAlt: "Das gläserne Steve Jobs Theater im Apple Park hinter einer trockenen Wiese",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "10.09.2026",
+    readTime: "8 Min.",
+    verified: "5 Quellen geprüft"
+  },
+  {
     id: "gasspeicher-deutschland-august-2026",
     url: "/wirtschaft/gasspeicher-deutschland-52-prozent-august-2026",
     category: "Energie",
@@ -545,21 +563,6 @@ const newsItems = [
     publishedAt: "30.08.2026",
     readTime: "5 Min.",
     verified: "4 Quellen geprüft"
-  },
-  {
-    id: "apple-event-september-2026",
-    url: "/technologie/apple-event-9-september-2026-iphone",
-    category: "Technologie",
-    title: "Apple Event am 9. September: Termin bestätigt, Geräte noch offen",
-    summary:
-      "Der Livestream beginnt um 19 Uhr deutscher Zeit. Neue iPhones und ein mögliches Faltmodell werden erwartet, sind von Apple aber noch nicht bestätigt.",
-    tone: "technology",
-    glyph: "◇",
-    featured: false,
-    status: "Verifiziert",
-    publishedAt: "29.08.2026",
-    readTime: "4 Min.",
-    verified: "3 Quellen geprüft"
   },
   {
     id: "ecb-central-bank-money-on-chain",
