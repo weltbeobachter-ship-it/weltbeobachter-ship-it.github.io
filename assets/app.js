@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "gasspeicher-deutschland-august-2026",
+    url: "/wirtschaft/gasspeicher-deutschland-52-prozent-august-2026",
+    category: "Energie",
+    title: "Gasspeicher bei knapp 55 Prozent – Regierung sieht keinen Eingriffsbedarf",
+    summary:
+      "Die Reserven liegen auf einem historischen Tief für Anfang September. Für einen durchschnittlichen Winter hält die Regierung Speicher und Importe dennoch für ausreichend.",
+    tone: "energy",
+    glyph: "↯",
+    image: "/assets/gasspeicher-deutschland-empelde.webp",
+    imageAlt: "Oberirdische Rohrleitungen und Armaturen des Erdgasspeichers Empelde bei Hannover",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "09.09.2026",
+    readTime: "8 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "meta-muse-ki-agent-2026",
     url: "/technologie/meta-muse-ki-agent-usa-whatsapp-2026",
     category: "Technologie",
@@ -522,23 +540,6 @@ const newsItems = [
     glyph: "◌",
     image: "/assets/robusta-kaffee-klimarisiko-editorial.webp",
     imageAlt: "Illustration eines Robusta-Kaffeezweigs zwischen feuchter Vegetation und trockenem Boden",
-    featured: false,
-    status: "Verifiziert",
-    publishedAt: "30.08.2026",
-    readTime: "5 Min.",
-    verified: "4 Quellen geprüft"
-  },
-  {
-    id: "gasspeicher-deutschland-august-2026",
-    url: "/wirtschaft/gasspeicher-deutschland-52-prozent-august-2026",
-    category: "Wirtschaft",
-    title: "Deutsche Gasspeicher erreichen 52,25 Prozent",
-    summary:
-      "Die Speicher werden wieder schneller befüllt. Die Bundesnetzagentur bewertet die Versorgung aktuell als stabil, der weitere Aufbau bleibt wichtig.",
-    tone: "economy",
-    glyph: "◴",
-    image: "/assets/gasspeicher-deutschland-editorial.webp",
-    imageAlt: "Illustration einer Gasspeicher-Infrastruktur bei Abendlicht",
     featured: false,
     status: "Verifiziert",
     publishedAt: "30.08.2026",
