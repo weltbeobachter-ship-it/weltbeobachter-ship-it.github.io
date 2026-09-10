@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "wasserstoff-investitionen-global-2026",
+    url: "/wirtschaft/wasserstoff-investitionen-130-milliarden-dollar-2026",
+    category: "Wirtschaft",
+    title: "Sauberer Wasserstoff: Zugesagte Investitionen erreichen 130 Milliarden Dollar",
+    summary:
+      "Ein Branchenbericht zählt 579 fest zugesagte Projekte und 6,9 Millionen Tonnen Jahreskapazität. Hohe Kosten, fehlende Abnehmer und offene EU-Umsetzung bremsen den Markt weiter.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/globaler-wasserstoffmarkt-elektrolyseur-2026.webp",
+    imageAlt: "Geöffnetes industrielles Zwei-Megawatt-Elektrolyseurmodul mit sichtbaren Zellstapeln in einer Werkhalle",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "10.09.2026",
+    readTime: "8 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "august-2026-waermster-august-copernicus",
     url: "/klima/august-2026-waermster-august-weltweit-1-65-grad",
     category: "Klima",
