@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "google-finnland-ki-infrastruktur-atomstrom-2026",
+    url: "/energie/google-finnland-13-milliarden-ki-rechenzentren-atomstrom-2026",
+    category: "Energie",
+    title: "Google plant 13 Milliarden Euro für Finnland – Atomstrom soll KI-Rechenzentren absichern",
+    summary:
+      "Google will 2027 und 2028 in Rechenzentren und Energieinfrastruktur investieren. Ein 22-Jahres-Vertrag bindet bis zu 50 Prozent der Leistung von Loviisa; neue Kapazitäten bleiben offen.",
+    tone: "energy",
+    glyph: "↯",
+    image: "/assets/google-finnland-loviisa-kernkraftwerk.webp",
+    imageAlt: "Das Kernkraftwerk Loviisa mit zwei Reaktorgebäuden am bewaldeten Ufer des Finnischen Meerbusens",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "10.09.2026",
+    readTime: "8 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "apple-event-september-2026",
     url: "/technologie/apple-event-9-september-2026-iphone",
     category: "Technologie",
