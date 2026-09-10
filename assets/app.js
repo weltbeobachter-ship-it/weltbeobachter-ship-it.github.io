@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "nasa-ibm-lunar-foundation-model-2026",
+    url: "/wissenschaft/nasa-ibm-offenes-ki-modell-mondkarten-2026",
+    category: "Wissenschaft",
+    title: "NASA und IBM veröffentlichen offenes KI-Modell für Mondkarten",
+    summary:
+      "Das Lunar Foundation Model bündelt elf Arten von Beobachtungsdaten für Krater, Eis-Hinweise und Vulkanstrukturen. Für operative Landeentscheidungen ist es nicht validiert.",
+    tone: "science",
+    glyph: "◎",
+    image: "/assets/wissenschaft-nasa-ibm-mond-ki-modell-2026.webp",
+    imageAlt: "Fotorealistische redaktionelle Illustration einer kraterreichen Mondlandschaft mit dezentem Datennetz",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "11.09.2026",
+    readTime: "8 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "wasserstoff-investitionen-global-2026",
     url: "/wirtschaft/wasserstoff-investitionen-130-milliarden-dollar-2026",
     category: "Wirtschaft",
