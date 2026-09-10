@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "august-2026-waermster-august-copernicus",
+    url: "/klima/august-2026-waermster-august-weltweit-1-65-grad",
+    category: "Klima",
+    title: "August 2026 war der wärmste August – weltweit teilt er den Monatsrekord",
+    summary:
+      "Copernicus misst global 16,96 Grad und 1,65 Grad über dem vorindustriellen Niveau. Westeuropa erlebte seinen wärmsten Sommer; die 1,5-Grad-Marke ist damit aber nicht dauerhaft überschritten.",
+    tone: "climate",
+    glyph: "≈",
+    image: "/assets/august-2026-rhein-niedrigwasser-oberwesel.webp",
+    imageAlt: "Niedrigwasser am Rhein bei Oberwesel mit breiten freiliegenden Sandbänken und zwei Frachtschiffen",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "10.09.2026",
+    readTime: "8 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "google-finnland-ki-infrastruktur-atomstrom-2026",
     url: "/energie/google-finnland-13-milliarden-ki-rechenzentren-atomstrom-2026",
     category: "Energie",
