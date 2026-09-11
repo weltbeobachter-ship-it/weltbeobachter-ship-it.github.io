@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "eurozone-inflation-august-2026",
+    url: "/wirtschaft/eurozone-inflation-3-3-prozent-august-2026",
+    category: "Wirtschaft",
+    title: "EZB erhöht Leitzins: Einlagensatz steigt auf 2,5 Prozent",
+    summary:
+      "Der EZB-Rat hebt alle drei Leitzinsen um 25 Basispunkte an. Die neuen Sätze gelten ab 16. September; weitere Schritte sind nicht beschlossen.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/eurozone-inflation-august-2026-editorial.webp",
+    imageAlt: "Illustration einer Europakarte mit Münzen, Heizkörper, Glühbirne und ansteigender Energiekostenlinie",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "11.09.2026",
+    readTime: "8 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "nasa-ibm-lunar-foundation-model-2026",
     url: "/wissenschaft/nasa-ibm-offenes-ki-modell-mondkarten-2026",
     category: "Wissenschaft",
@@ -272,24 +290,6 @@ const newsItems = [
     publishedAt: "07.09.2026",
     readTime: "7 Min.",
     verified: "5 Quellen geprüft"
-  },
-  {
-    id: "eurozone-inflation-august-2026",
-    url: "/wirtschaft/eurozone-inflation-3-3-prozent-august-2026",
-    category: "Wirtschaft",
-    title: "Vor EZB-Entscheidung: Zinserhöhung wird erwartet",
-    summary:
-      "Die Eurozonen-Inflation liegt bei 3,3 Prozent. Märkte rechnen für den 10. September mit einem Zinsschritt auf 2,5 Prozent – beschlossen ist er nicht.",
-    tone: "economy",
-    glyph: "◴",
-    image: "/assets/eurozone-inflation-august-2026-editorial.webp",
-    imageAlt: "Illustration einer Europakarte mit Münzen, Heizkörper, Glühbirne und ansteigender Energiekostenlinie",
-    featured: true,
-    status: "Verifiziert",
-    dateLabel: "Aktualisiert",
-    publishedAt: "07.09.2026",
-    readTime: "8 Min.",
-    verified: "6 Quellen geprüft"
   },
   {
     id: "ifa-2026-berlin-ki-robotik-china",
