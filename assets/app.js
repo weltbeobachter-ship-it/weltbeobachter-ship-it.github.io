@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "openai-chatgpt-financial-services-2026",
+    url: "/technologie/openai-chatgpt-financial-services-banken-2026",
+    category: "Technologie",
+    title: "ChatGPT für Finanzdienste startet – Zugang zunächst nur für Institute",
+    summary:
+      "OpenAI bündelt GPT-6 Astra, Finanzdaten und Kontrollfunktionen in einem Branchenprodukt. Preise, deutsche Kunden und unabhängige Praxisergebnisse bleiben offen.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/chatgpt-finanzdienstleistungen-ki-infrastruktur-2026.webp",
+    imageAlt: "Leerer Arbeitsplatz mit geschlossenem Laptop, ausgeschaltetem Bildschirm und Serverracks im Hintergrund",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "11.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "august-2026-waermster-august-copernicus",
     url: "/klima/august-2026-waermster-august-weltweit-1-65-grad",
     category: "Klima",
