@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "august-2026-waermster-august-copernicus",
+    url: "/klima/august-2026-waermster-august-weltweit-1-65-grad",
+    category: "Klima",
+    title: "Europas Rekordsommer: UN-Klimachef warnt vor Kosten- und Energierisiken",
+    summary:
+      "Copernicus belegt den Rekordsommer in Westeuropa. Simon Stiell warnt vor wirtschaftlichen Folgen; die Schätzung von 180 Milliarden Euro ist keine Schadensbilanz.",
+    tone: "climate",
+    glyph: "≈",
+    image: "/assets/august-2026-rhein-niedrigwasser-oberwesel.webp",
+    imageAlt: "Niedrigwasser am Rhein bei Oberwesel mit breiten freiliegenden Sandbänken und zwei Frachtschiffen",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "11.09.2026",
+    readTime: "10 Min.",
+    verified: "7 Quellen geprüft"
+  },
+  {
     id: "eurozone-inflation-august-2026",
     url: "/wirtschaft/eurozone-inflation-3-3-prozent-august-2026",
     category: "Wirtschaft",
@@ -45,23 +63,6 @@ const newsItems = [
     glyph: "◴",
     image: "/assets/globaler-wasserstoffmarkt-elektrolyseur-2026.webp",
     imageAlt: "Geöffnetes industrielles Zwei-Megawatt-Elektrolyseurmodul mit sichtbaren Zellstapeln in einer Werkhalle",
-    featured: true,
-    status: "Verifiziert",
-    publishedAt: "10.09.2026",
-    readTime: "8 Min.",
-    verified: "3 Quellen geprüft"
-  },
-  {
-    id: "august-2026-waermster-august-copernicus",
-    url: "/klima/august-2026-waermster-august-weltweit-1-65-grad",
-    category: "Klima",
-    title: "August 2026 war der wärmste August – weltweit teilt er den Monatsrekord",
-    summary:
-      "Copernicus misst global 16,96 Grad und 1,65 Grad über dem vorindustriellen Niveau. Westeuropa erlebte seinen wärmsten Sommer; die 1,5-Grad-Marke ist damit aber nicht dauerhaft überschritten.",
-    tone: "climate",
-    glyph: "≈",
-    image: "/assets/august-2026-rhein-niedrigwasser-oberwesel.webp",
-    imageAlt: "Niedrigwasser am Rhein bei Oberwesel mit breiten freiliegenden Sandbänken und zwei Frachtschiffen",
     featured: true,
     status: "Verifiziert",
     publishedAt: "10.09.2026",
