@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "eurozone-inflation-august-2026",
+    url: "/wirtschaft/eurozone-inflation-3-3-prozent-august-2026",
+    category: "Wirtschaft",
+    title: "EZB-Zins bei 2,5 Prozent – hoher Ölpreis hält weitere Erhöhung offen",
+    summary:
+      "Ein Ratsmitglied hält bei dauerhaft rund 100 Dollar je Barrel eine weitere Erhöhung für möglich. Ein anderes warnt vor Wachstumskosten; beschlossen ist kein zusätzlicher Schritt.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/eurozone-inflation-august-2026-editorial.webp",
+    imageAlt: "Illustration einer Europakarte mit Münzen, Heizkörper, Glühbirne und ansteigender Energiekostenlinie",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "13.09.2026",
+    readTime: "10 Min.",
+    verified: "9 Quellen geprüft"
+  },
+  {
     id: "wmo-el-nino-2026",
     url: "/klima/wmo-el-nino-sehr-stark-bis-2027",
     category: "Klima",
@@ -102,24 +120,6 @@ const newsItems = [
     publishedAt: "11.09.2026",
     readTime: "10 Min.",
     verified: "7 Quellen geprüft"
-  },
-  {
-    id: "eurozone-inflation-august-2026",
-    url: "/wirtschaft/eurozone-inflation-3-3-prozent-august-2026",
-    category: "Wirtschaft",
-    title: "EZB erhöht Leitzins: Einlagensatz steigt auf 2,5 Prozent",
-    summary:
-      "Der EZB-Rat hebt alle drei Leitzinsen um 25 Basispunkte an. Die neuen Sätze gelten ab 16. September; weitere Schritte sind nicht beschlossen.",
-    tone: "economy",
-    glyph: "◴",
-    image: "/assets/eurozone-inflation-august-2026-editorial.webp",
-    imageAlt: "Illustration einer Europakarte mit Münzen, Heizkörper, Glühbirne und ansteigender Energiekostenlinie",
-    featured: true,
-    status: "Aktualisiert",
-    dateLabel: "Aktualisiert",
-    publishedAt: "11.09.2026",
-    readTime: "8 Min.",
-    verified: "6 Quellen geprüft"
   },
   {
     id: "nasa-ibm-lunar-foundation-model-2026",
