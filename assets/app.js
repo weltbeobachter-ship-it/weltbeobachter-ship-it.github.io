@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "wmo-el-nino-2026",
+    url: "/klima/wmo-el-nino-sehr-stark-bis-2027",
+    category: "Klima",
+    title: "El Niño verstärkt sich – Atlantik bleibt bis Mitte September ohne Hurrikan",
+    summary:
+      "NOAA sieht eine Wahrscheinlichkeit von mehr als 90 Prozent für einen sehr starken El Niño. Die auffällig ruhige Atlantiksaison ist noch nicht beendet.",
+    tone: "climate",
+    glyph: "≈",
+    image: "/assets/el-nino-wmo-2026-editorial.webp",
+    imageAlt: "Illustration eines warmen Bandes im tropischen Pazifik mit symbolischen Regen- und Dürreszenen",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "12.09.2026",
+    readTime: "9 Min.",
+    verified: "7 Quellen geprüft"
+  },
+  {
     id: "anthropic-amodei-ki-entwicklung-verlangsamen-2026",
     url: "/technologie/anthropic-amodei-ki-entwicklung-verlangsamen-2026",
     category: "Technologie",
@@ -474,23 +492,6 @@ const newsItems = [
     image: "/assets/nvidia-hugging-face-2026-editorial.webp",
     imageAlt: "Abstrakte Illustration eines KI-Chips, der mit modularen Modell-Repositorien verbunden ist",
     featured: true,
-    status: "Verifiziert",
-    publishedAt: "04.09.2026",
-    readTime: "7 Min.",
-    verified: "5 Quellen geprüft"
-  },
-  {
-    id: "wmo-el-nino-2026",
-    url: "/klima/wmo-el-nino-sehr-stark-bis-2027",
-    category: "Klima",
-    title: "WMO: El Niño wird sehr stark – Folgen bis 2027",
-    summary:
-      "Nahezu sicher ist das Fortbestehen bis Februar 2027, nicht ein bestimmtes Wetter in Deutschland. Messwerte und Wahrscheinlichkeiten im Überblick.",
-    tone: "climate",
-    glyph: "≈",
-    image: "/assets/el-nino-wmo-2026-editorial.webp",
-    imageAlt: "Illustration eines warmen Bandes im tropischen Pazifik mit symbolischen Regen- und Dürreszenen",
-    featured: false,
     status: "Verifiziert",
     publishedAt: "04.09.2026",
     readTime: "7 Min.",
