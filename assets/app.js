@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "anthropic-amodei-ki-entwicklung-verlangsamen-2026",
+    url: "/technologie/anthropic-amodei-ki-entwicklung-verlangsamen-2026",
+    category: "Technologie",
+    title: "Anthropic-Chef fordert langsamere KI-Entwicklung – externe Prüfer zugesagt",
+    summary:
+      "Dario Amodei legt einen Drei-Stufen-Plan vor. Konkret zugesagt ist ein externes Prüferteam bei Anthropic; Zeitplan und Branchenabkommen fehlen.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/mistral-ki-rechenzentrum-server.webp",
+    imageAlt: "Nahaufnahme beleuchteter Serverracks in einem Rechenzentrum",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "12.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "us-inflation-august-2026-fed-zinsentscheid",
     url: "/wirtschaft/us-inflation-august-2026-fed-zinsentscheid",
     category: "Wirtschaft",
