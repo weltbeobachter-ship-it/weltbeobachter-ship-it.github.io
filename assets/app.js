@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "rwe-masdar-adnoc-deutschland-2026",
+    url: "/energie/rwe-masdar-adnoc-wind-lng-deutschland-2026",
+    category: "Energie",
+    title: "RWE und VAE-Partner planen Wind- und LNG-Geschäfte – Verträge noch offen",
+    summary:
+      "RWE und Masdar prüfen Gebote für deutsche Offshore-Windauktionen 2027. Mit ADNOC sollen bis zu zwei LNG-Verträge entstehen; alle Kerndetails sind noch offen.",
+    tone: "energy",
+    glyph: "↯",
+    image: "/assets/prinzessin-elisabeth-energieinsel-nordsee.webp",
+    imageAlt: "Sechs Offshore-Windräder stehen vor bewölktem Himmel in der belgischen Nordsee",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "12.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Nachrichtenquellen geprüft"
+  },
+  {
     id: "openai-chatgpt-financial-services-2026",
     url: "/technologie/openai-chatgpt-financial-services-banken-2026",
     category: "Technologie",
