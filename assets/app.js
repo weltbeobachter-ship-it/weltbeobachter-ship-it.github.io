@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "us-inflation-august-2026-fed-zinsentscheid",
+    url: "/wirtschaft/us-inflation-august-2026-fed-zinsentscheid",
+    category: "Wirtschaft",
+    title: "US-Inflation bleibt bei 3,4 Prozent – Fed-Entscheidung noch offen",
+    summary:
+      "Die Verbraucherpreise stiegen im August um 0,4 Prozent. Benzin war der wichtigste Treiber; welchen Zinsschritt die Fed wählt, ist noch nicht entschieden.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/us-inflation-august-2026-gasoline-editorial.webp",
+    imageAlt: "Unbeschriftete Zapfsäule mit Zapfpistole, Münzen und Kassenbon an einer leeren Tankstelle",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "12.09.2026",
+    readTime: "7 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "rwe-masdar-adnoc-deutschland-2026",
     url: "/energie/rwe-masdar-adnoc-wind-lng-deutschland-2026",
     category: "Energie",
