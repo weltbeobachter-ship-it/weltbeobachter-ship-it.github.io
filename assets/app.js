@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "eu-arktisgipfel-rovaniemi-2026",
+    url: "/welt/eu-arktisgipfel-rovaniemi-strategie-2026",
+    category: "Welt",
+    title: "EU-Arktisgipfel in Rovaniemi: Merz berät über gemeinsame Strategie",
+    summary:
+      "Das Treffen beginnt mit einem Arbeitsessen. Teilnehmer und Themenrahmen stehen fest; konkrete Beschlüsse, Finanzzusagen und ein Zeitplan sind noch nicht veröffentlicht.",
+    tone: "world",
+    glyph: "◉",
+    image: "/assets/eu-arktisgipfel-nasa-seeeis.webp",
+    imageAlt: "NASA-Datenvisualisierung der Arktis mit weißer Meereisbedeckung rund um den Nordpol",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "13.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "chandra-hypersofte-roentgenquellen-2026",
     url: "/wissenschaft/chandra-84-hypersofte-roentgenquellen-2026",
     category: "Wissenschaft",
