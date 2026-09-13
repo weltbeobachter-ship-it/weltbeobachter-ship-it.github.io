@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "chandra-hypersofte-roentgenquellen-2026",
+    url: "/wissenschaft/chandra-84-hypersofte-roentgenquellen-2026",
+    category: "Wissenschaft",
+    title: "Chandra findet 84 hypersofte Röntgenquellen – was noch ungeklärt ist",
+    summary:
+      "Die Quellen leuchten fast nur am energieärmsten Rand des Röntgenbereichs. Kompakte Doppelsternsysteme sind plausibel, ihre genaue Natur bleibt offen.",
+    tone: "science",
+    glyph: "◎",
+    image: "/assets/chandra-m101-roentgenaufnahme.webp",
+    imageAlt: "Röntgenaufnahme der Spiralgalaxie M101 mit zahlreichen punktförmigen Röntgenquellen",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "13.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "eurozone-inflation-august-2026",
     url: "/wirtschaft/eurozone-inflation-3-3-prozent-august-2026",
     category: "Wirtschaft",
