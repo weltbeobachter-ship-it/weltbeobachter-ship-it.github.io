@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "kilauea-episode-55-lavafontaenen-prognose-2026",
+    url: "/wissenschaft/kilauea-episode-55-lavafontaenen-prognose-2026",
+    category: "Wissenschaft",
+    title: "Kīlauea: Episode 55 binnen 24 bis 48 Stunden möglich – Zeitpunkt bleibt offen",
+    summary:
+      "Das USGS registrierte 104 kurze Lavaüberläufe. Eine neue Fontänenphase ist möglich; ihr genauer Beginn lässt sich derzeit nicht zuverlässig modellieren.",
+    tone: "science",
+    glyph: "◎",
+    image: "/assets/kilauea-episode-55-usgs.webp",
+    imageAlt: "Abgekühlter Lavakanal im Halemaʻumaʻu-Krater mit einer kleinen rot glühenden Stelle und aufsteigendem Dampf",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "14.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "anthropic-amodei-ki-entwicklung-verlangsamen-2026",
     url: "/technologie/anthropic-amodei-ki-entwicklung-verlangsamen-2026",
     category: "Technologie",
