@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "tesla-roadster-vorstellung-oktober-2026",
+    url: "/technologie/tesla-roadster-vorstellung-1-oktober-2026",
+    category: "Technologie",
+    title: "Tesla Roadster: Vorstellung am 1. Oktober angekündigt – Serienstart bleibt offen",
+    summary:
+      "Tesla nennt mit dem 1. Oktober ein konkretes Datum für die nächste Roadster-Präsentation. Produktionsstart, Preis und Europa-Termin sind weiterhin nicht bestätigt.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/tesla-roadster-prototyp-2017.webp",
+    imageAlt: "Nahaufnahme der Front und des linken Vorderrads eines grauen Tesla-Roadster-Prototyps von 2017",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "14.09.2026",
+    readTime: "8 Min.",
+    verified: "5 Quellen geprüft"
+  },
+  {
     id: "deutsche-direktinvestitionen-china-usa-h1-2026",
     url: "/wirtschaft/deutsche-direktinvestitionen-china-usa-h1-2026",
     category: "Wirtschaft",
