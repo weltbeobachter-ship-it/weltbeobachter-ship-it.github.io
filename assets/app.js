@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "deutsche-direktinvestitionen-china-usa-h1-2026",
+    url: "/wirtschaft/deutsche-direktinvestitionen-china-usa-h1-2026",
+    category: "Wirtschaft",
+    title: "Deutsche Direktinvestitionen: China-Zuflüsse steigen auf 5,6 Milliarden Euro",
+    summary:
+      "Im ersten Halbjahr floss mehr deutsches Direktinvestitionskapital nach China als in die USA. Die Halbjahresdaten belegen aber noch keinen dauerhaften Standortwechsel.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/deutsche-exporte-hamburg-containerterminal.webp",
+    imageAlt: "Containerbrücken und Frachtschiffe am Terminal Tollerort im Hamburger Hafen",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "14.09.2026",
+    readTime: "9 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "kilauea-episode-55-lavafontaenen-prognose-2026",
     url: "/wissenschaft/kilauea-episode-55-lavafontaenen-prognose-2026",
     category: "Wissenschaft",
