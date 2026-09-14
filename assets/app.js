@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "himalaya-gletscher-masseverlust-2026",
+    url: "/klima/himalaya-gletscher-masseverlust-65-prozent-schneller-2026",
+    category: "Klima",
+    title: "Himalaya-Gletscher verlieren laut Bericht 65 Prozent schneller Masse",
+    summary:
+      "Eine neue Kurzfassung warnt vor beschleunigtem Eisverlust und wachsenden Wasserrisiken. Die vollständige Methodik soll erst im Oktober erscheinen.",
+    tone: "climate",
+    glyph: "≈",
+    image: "/assets/himalaya-nanpa-la-landsat-nasa.webp",
+    imageAlt: "Falschfarben-Satellitenbild der Gletscher an den Pässen Nanpa La und Nup La im Himalaya",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "14.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "tesla-roadster-vorstellung-oktober-2026",
     url: "/technologie/tesla-roadster-vorstellung-1-oktober-2026",
     category: "Technologie",
