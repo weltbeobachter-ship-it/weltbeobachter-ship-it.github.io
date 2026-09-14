@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "eu-arktisgipfel-rovaniemi-2026",
+    url: "/welt/eu-arktisgipfel-rovaniemi-strategie-2026",
+    category: "Welt",
+    title: "EU-Arktisgipfel: Zwölf Staaten fordern stärkere EU-Rolle – konkrete Mittel bleiben offen",
+    summary:
+      "Zwölf EU-Staaten, darunter Deutschland, verlangen eine strategischere und aktivere EU-Rolle in der Arktis. Welche Mittel und Projekte folgen, ist noch nicht beschlossen.",
+    tone: "world",
+    glyph: "◉",
+    image: "/assets/eu-arktisgipfel-nasa-seeeis.webp",
+    imageAlt: "NASA-Datenvisualisierung der Arktis mit weißer Meereisbedeckung rund um den Nordpol",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "14.09.2026",
+    readTime: "9 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "himalaya-gletscher-masseverlust-2026",
     url: "/klima/himalaya-gletscher-masseverlust-65-prozent-schneller-2026",
     category: "Klima",
@@ -84,23 +102,6 @@ const newsItems = [
     publishedAt: "13.09.2026",
     readTime: "10 Min.",
     verified: "7 Quellen geprüft"
-  },
-  {
-    id: "eu-arktisgipfel-rovaniemi-2026",
-    url: "/welt/eu-arktisgipfel-rovaniemi-strategie-2026",
-    category: "Welt",
-    title: "EU-Arktisgipfel in Rovaniemi: Merz berät über gemeinsame Strategie",
-    summary:
-      "Das Treffen beginnt mit einem Arbeitsessen. Teilnehmer und Themenrahmen stehen fest; konkrete Beschlüsse, Finanzzusagen und ein Zeitplan sind noch nicht veröffentlicht.",
-    tone: "world",
-    glyph: "◉",
-    image: "/assets/eu-arktisgipfel-nasa-seeeis.webp",
-    imageAlt: "NASA-Datenvisualisierung der Arktis mit weißer Meereisbedeckung rund um den Nordpol",
-    featured: true,
-    status: "Verifiziert",
-    publishedAt: "13.09.2026",
-    readTime: "8 Min.",
-    verified: "4 Quellen geprüft"
   },
   {
     id: "chandra-hypersofte-roentgenquellen-2026",
