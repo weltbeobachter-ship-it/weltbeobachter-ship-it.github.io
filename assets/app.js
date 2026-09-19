@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "eu-arktisgipfel-rovaniemi-2026",
+    url: "/welt/eu-arktisgipfel-rovaniemi-strategie-2026",
+    category: "Welt",
+    title: "Grönland-Abkommen: Was bestätigt ist und was noch fehlt",
+    summary:
+      "Dänemark, Grönland und die USA planen ein Sicherheitsabkommen. Souveränität und Selbstbestimmung werden bekräftigt; Vertragstext und genaue Befugnisse fehlen noch.",
+    tone: "world",
+    glyph: "◉",
+    image: "/assets/eu-arktisgipfel-nasa-seeeis.webp",
+    imageAlt: "NASA-Datenvisualisierung der Arktis mit weißer Meereisbedeckung rund um den Nordpol",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "19.09.2026",
+    readTime: "10 Min.",
+    verified: "8 Quellen geprüft"
+  },
+  {
     id: "carsten-breuer-nato-militaerausschuss-vorsitz-2027",
     url: "/welt/carsten-breuer-nato-militaerausschuss-vorsitz-2027",
     category: "Welt",
@@ -65,24 +83,6 @@ const newsItems = [
     featured: true,
     status: "Verifiziert",
     publishedAt: "19.09.2026",
-    readTime: "9 Min.",
-    verified: "6 Quellen geprüft"
-  },
-  {
-    id: "eu-arktisgipfel-rovaniemi-2026",
-    url: "/welt/eu-arktisgipfel-rovaniemi-strategie-2026",
-    category: "Welt",
-    title: "EU-Arktisgipfel: Zwölf Staaten fordern stärkere EU-Rolle",
-    summary:
-      "Deutschland und elf weitere EU-Staaten verlangen mehr strategisches Engagement. Konkrete Programme, Beträge und Fristen nennt die Erklärung noch nicht.",
-    tone: "world",
-    glyph: "◉",
-    image: "/assets/eu-arktisgipfel-nasa-seeeis.webp",
-    imageAlt: "NASA-Datenvisualisierung der Arktis mit weißer Meereisbedeckung rund um den Nordpol",
-    featured: true,
-    status: "Aktualisiert",
-    dateLabel: "Aktualisiert",
-    publishedAt: "14.09.2026",
     readTime: "9 Min.",
     verified: "6 Quellen geprüft"
   },
