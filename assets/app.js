@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "carsten-breuer-nato-militaerausschuss-vorsitz-2027",
+    url: "/welt/carsten-breuer-nato-militaerausschuss-vorsitz-2027",
+    category: "Welt",
+    title: "Carsten Breuer wird NATO-Militärausschuss-Vorsitzender – was das Amt bedeutet",
+    summary:
+      "Die 32 Verbündeten haben Deutschlands Generalinspekteur gewählt. Der Vorsitz prägt die militärische Beratung, ist aber kein operatives Oberkommando.",
+    tone: "world",
+    glyph: "◉",
+    image: "/assets/nato-hauptquartier-bruessel-romaine-cc0.webp",
+    imageAlt: "Außenansicht des NATO-Hauptquartiers in Brüssel hinter einem Metallzaun",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "19.09.2026",
+    readTime: "8 Min.",
+    verified: "7 Quellen geprüft"
+  },
+  {
     id: "imf-ki-europa-produktivitaet-stromnetze-2026",
     url: "/wirtschaft/imf-ki-europa-produktivitaet-stromnetze-2026",
     category: "Wirtschaft",
