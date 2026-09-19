@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "anthropic-amodei-ki-entwicklung-verlangsamen-2026",
+    url: "/technologie/anthropic-amodei-ki-entwicklung-verlangsamen-2026",
+    category: "Technologie",
+    title: "Anthropic und Accenture: Zwei Milliarden Dollar für KI-Prüfung geplant",
+    summary:
+      "Faculty soll Modelle und Sicherheitsprozesse von innen prüfen. Die Investitionen sind konkret; Standards, Finanzierung und erste öffentliche Berichte bleiben offen.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/mistral-ki-rechenzentrum-server.webp",
+    imageAlt: "Nahaufnahme beleuchteter Serverracks in einem Rechenzentrum",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "19.09.2026",
+    readTime: "10 Min.",
+    verified: "7 Quellen geprüft"
+  },
+  {
     id: "tankrabatt-deutschland-17-cent-2026",
     url: "/energie/tankrabatt-deutschland-17-cent-oktober-2026",
     category: "Energie",
@@ -101,24 +119,6 @@ const newsItems = [
     publishedAt: "14.09.2026",
     readTime: "8 Min.",
     verified: "4 Quellen geprüft"
-  },
-  {
-    id: "anthropic-amodei-ki-entwicklung-verlangsamen-2026",
-    url: "/technologie/anthropic-amodei-ki-entwicklung-verlangsamen-2026",
-    category: "Technologie",
-    title: "KI-Tempo: Anthropic plant externe Prüfer – OpenAI schließt Börsengang 2026 aus",
-    summary:
-      "Amodei fordert ein kontrollierteres KI-Tempo, Altman unterstützt den Ansatz. Bestätigt sind Zusagen; Umsetzung und möglicher Branchenpakt bleiben offen.",
-    tone: "technology",
-    glyph: "◇",
-    image: "/assets/mistral-ki-rechenzentrum-server.webp",
-    imageAlt: "Nahaufnahme beleuchteter Serverracks in einem Rechenzentrum",
-    featured: true,
-    status: "Aktualisiert",
-    dateLabel: "Aktualisiert",
-    publishedAt: "13.09.2026",
-    readTime: "10 Min.",
-    verified: "7 Quellen geprüft"
   },
   {
     id: "chandra-hypersofte-roentgenquellen-2026",
