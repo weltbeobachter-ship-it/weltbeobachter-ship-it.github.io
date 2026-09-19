@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "imf-ki-europa-produktivitaet-stromnetze-2026",
+    url: "/wirtschaft/imf-ki-europa-produktivitaet-stromnetze-2026",
+    category: "Wirtschaft",
+    title: "IWF zu KI in Europa: Ein Prozent mehr Produktivität – was die Schätzung bedeutet",
+    summary:
+      "Der Modellwert ist kein jährliches Wachstumsversprechen. Der IWF warnt zugleich vor ungleichen Jobchancen, Stromnetzengpässen und neuer technologischer Abhängigkeit.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/mistral-ki-rechenzentrum-server.webp",
+    imageAlt: "Beleuchtete Serverracks in einem Computerraum",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "19.09.2026",
+    readTime: "9 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "anthropic-amodei-ki-entwicklung-verlangsamen-2026",
     url: "/technologie/anthropic-amodei-ki-entwicklung-verlangsamen-2026",
     category: "Technologie",
