@@ -1,11 +1,28 @@
 const newsItems = [
   {
+    id: "tankrabatt-deutschland-17-cent-2026",
+    url: "/energie/tankrabatt-deutschland-17-cent-oktober-2026",
+    category: "Energie",
+    title: "Tankrabatt 2026: 17 Cent ab Oktober – Preisdeckel bleibt offen",
+    summary:
+      "Bund und Länder planen eine befristete Steuerentlastung. Die 17 Cent sind ein Rechenwert; der sichtbare Zapfsäulenpreis und die Regeln für einen Deckel bleiben zu prüfen.",
+    tone: "energy",
+    glyph: "⚡",
+    image: "/assets/tankrabatt-deutschland-tankstelle-weinheim.webp",
+    imageAlt: "Leere freie Tankstelle in Weinheim mit zwei geparkten Autos und mehreren Zapfsäulen",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "19.09.2026",
+    readTime: "9 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "eu-arktisgipfel-rovaniemi-2026",
     url: "/welt/eu-arktisgipfel-rovaniemi-strategie-2026",
     category: "Welt",
-    title: "EU-Arktisgipfel: Zwölf Staaten fordern stärkere EU-Rolle – konkrete Mittel bleiben offen",
+    title: "EU-Arktisgipfel: Zwölf Staaten fordern stärkere EU-Rolle",
     summary:
-      "Zwölf EU-Staaten, darunter Deutschland, verlangen eine strategischere und aktivere EU-Rolle in der Arktis. Welche Mittel und Projekte folgen, ist noch nicht beschlossen.",
+      "Deutschland und elf weitere EU-Staaten verlangen mehr strategisches Engagement. Konkrete Programme, Beträge und Fristen nennt die Erklärung noch nicht.",
     tone: "world",
     glyph: "◉",
     image: "/assets/eu-arktisgipfel-nasa-seeeis.webp",
