@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "nordkorea-zwei-kurzstreckenraketen-20-september-2026",
+    url: "/welt/nordkorea-zwei-kurzstreckenraketen-20-september-2026",
+    category: "Welt",
+    title: "Nordkorea startet zwei Kurzstreckenraketen: Was bestätigt ist",
+    summary:
+      "Südkorea meldet zwei Starts binnen rund drei Stunden. Japan bestätigt für den ersten Flug eine Landung außerhalb seiner Wirtschaftszone.",
+    tone: "world",
+    glyph: "◉",
+    image: "/assets/nordkorea-koreanische-halbinsel-karte-2026-editorial.webp",
+    imageAlt: "Neutrale Übersichtskarte der Koreanischen Halbinsel und der angrenzenden Meere",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "20.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "us-china-gespraeche-zoelle-seltene-erden-2026",
     url: "/wirtschaft/us-china-gespraeche-zoelle-seltene-erden-2026",
     category: "Wirtschaft",
