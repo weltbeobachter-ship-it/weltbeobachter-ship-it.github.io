@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "un-generalversammlung-2026-termine-themen-deutschland",
+    url: "/welt/un-generalversammlung-2026-termine-themen-deutschland",
+    category: "Welt",
+    title: "UN-Generalversammlung 2026: Termine, Themen und Deutschlands Rolle",
+    summary:
+      "Ab 22. September treffen sich Staats- und Regierungschefs in New York. Im Mittelpunkt stehen KI, die Handlungsfähigkeit der UN und internationale Krisen.",
+    tone: "world",
+    glyph: "◉",
+    image: "/assets/un-hauptquartier-new-york-joe-mabel.webp",
+    imageAlt: "Blick über den East River auf das UN-Hauptquartier und die Skyline von Manhattan",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "20.09.2026",
+    readTime: "9 Min.",
+    verified: "5 Quellen geprüft"
+  },
+  {
     id: "iw-wachstumsprognose-deutschland-2026",
     url: "/wirtschaft/iw-wachstumsprognose-deutschland-2026-1-2-prozent",
     category: "Wirtschaft",
