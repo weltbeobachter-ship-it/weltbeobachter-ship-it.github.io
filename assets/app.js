@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "iw-wachstumsprognose-deutschland-2026",
+    url: "/wirtschaft/iw-wachstumsprognose-deutschland-2026-1-2-prozent",
+    category: "Wirtschaft",
+    title: "IW hebt Wachstumsprognose 2026 auf fast 1,2 Prozent an",
+    summary:
+      "Exporte und Staatsausgaben erklären den Sprung seit Mai. Konsum, Investitionen und die zweite Jahreshälfte bleiben nach der neuen Schätzung schwach.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/deutsche-exporte-hamburg-containerterminal.webp",
+    imageAlt: "Containerbrücken und Frachtschiffe am Terminal Tollerort im Hamburger Hafen",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "20.09.2026",
+    readTime: "8 Min.",
+    verified: "5 Quellen geprüft"
+  },
+  {
     id: "cxmt-dram-plattform-massenproduktion-2026",
     url: "/technologie/cxmt-dram-plattform-massenproduktion-2026",
     category: "Technologie",
