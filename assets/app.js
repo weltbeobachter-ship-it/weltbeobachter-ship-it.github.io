@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "batterie-wasserstoff-lkw-europa-2030-2026",
+    url: "/energie/batterie-wasserstoff-lkw-europa-2030",
+    category: "Energie",
+    title: "Batterie oder Wasserstoff-Lkw: Worauf setzt Europa bis 2030?",
+    summary:
+      "Europas Hersteller bauen Batterie-Lkw aus und planen zugleich eine deutsche Wasserstoff-Allianz. Kosten, Infrastruktur und die EU-Frist bleiben die entscheidenden offenen Punkte.",
+    tone: "energy",
+    glyph: "⚡",
+    image: "/assets/volvo-fh-fcev-iaa-hannover.webp",
+    imageAlt: "Blauer Volvo FH Fuel Cell Electric als Ausstellungsfahrzeug auf der IAA Transportation 2024 in Hannover",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "20.09.2026",
+    readTime: "10 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "google-gemini-sicherheitstest-unternehmen-2026",
     url: "/technologie/google-gemini-sicherheitstest-drei-unternehmen-2026",
     category: "Technologie",
