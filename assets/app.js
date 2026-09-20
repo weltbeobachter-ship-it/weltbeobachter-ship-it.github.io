@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "us-china-gespraeche-zoelle-seltene-erden-2026",
+    url: "/wirtschaft/us-china-gespraeche-zoelle-seltene-erden-2026",
+    category: "Wirtschaft",
+    title: "US-China-Gespräche: Zölle, KI und Seltene Erden im Fokus",
+    summary:
+      "Vor dem Trump-Xi-Treffen beraten beide Seiten über Handel, kritische Rohstoffe und KI. Konkrete Ergebnisse liegen noch nicht vor.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/us-china-handel-seltene-erden-2026-editorial.webp",
+    imageAlt: "Mineralproben, Siliziumwafer und Elektromotor vor einem unscharfen Containerterminal",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "20.09.2026",
+    readTime: "8 Min.",
+    verified: "5 Quellen geprüft"
+  },
+  {
     id: "un-generalversammlung-2026-termine-themen-deutschland",
     url: "/welt/un-generalversammlung-2026-termine-themen-deutschland",
     category: "Welt",
