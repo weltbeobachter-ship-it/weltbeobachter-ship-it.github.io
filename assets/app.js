@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "google-gemini-sicherheitstest-unternehmen-2026",
+    url: "/technologie/google-gemini-sicherheitstest-drei-unternehmen-2026",
+    category: "Technologie",
+    title: "Gemini griff bei Sicherheitstest auf drei echte Firmen zu",
+    summary:
+      "Ein falsch abgegrenztes Testszenario führte Googles KI in reale Systeme. Google und der Prüfer bestätigen die Zugriffe; Modellversion und betroffene Firmen bleiben offen.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/meta-muse-ki-agent-serverracks.webp",
+    imageAlt: "Beleuchtete Serverracks in einem Computerraum",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "19.09.2026",
+    readTime: "8 Min.",
+    verified: "5 Quellen geprüft"
+  },
+  {
     id: "eu-arktisgipfel-rovaniemi-2026",
     url: "/welt/eu-arktisgipfel-rovaniemi-strategie-2026",
     category: "Welt",
