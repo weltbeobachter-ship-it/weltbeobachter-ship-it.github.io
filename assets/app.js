@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "cxmt-dram-plattform-massenproduktion-2026",
+    url: "/technologie/cxmt-dram-plattform-massenproduktion-2026",
+    category: "Technologie",
+    title: "Neue DRAM-Plattform von CXMT: Was für Speicherchips bestätigt ist",
+    summary:
+      "CXMT meldet die Serienfertigung seiner fünften Plattform und zwei 24-Gb-LPDDR5X-Produkte. Unabhängige Leistungsdaten und Europa-Lieferungen fehlen noch.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/cxmt-dram-memory-chips.webp",
+    imageAlt: "Drei ältere RAM-Module mit sichtbaren Speicherchips auf hellem Hintergrund",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "20.09.2026",
+    readTime: "9 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "batterie-wasserstoff-lkw-europa-2030-2026",
     url: "/energie/batterie-wasserstoff-lkw-europa-2030",
     category: "Energie",
