@@ -1,5 +1,19 @@
 const newsItems = [
   {
+    "id": "burokratie-bleibt-laut-ifo-umfrage-grotes-standortproblem-deutschlands-20260921",
+    "url": "/wirtschaft/burokratie-bleibt-laut-ifo-umfrage-grotes-standortproblem-deutschlands-20260921",
+    "category": "Wirtschaft",
+    "title": "Bürokratie bleibt laut ifo-Umfrage größtes Standortproblem Deutschlands",
+    "summary": "Bürokratie bleibt laut ifo-Umfrage größtes Standortproblem Deutschlands. Bestätigt durch übereinstimmende aktuelle Berichte von mindestens zwei getrennten Herausgebern (aktien.news, DWN | Deutsche Wirtschaftsnachrichten, Spiegel).",
+    "tone": "economy",
+    "glyph": "◴",
+    "featured": true,
+    "status": "Automatisch geprüft",
+    "publishedAt": "21.09.2026",
+    "readTime": "3 Min.",
+    "verified": "3 Quellen geprüft"
+  },
+  {
     id: "nordkorea-zwei-kurzstreckenraketen-20-september-2026",
     url: "/welt/nordkorea-zwei-kurzstreckenraketen-20-september-2026",
     category: "Welt",
