@@ -1,5 +1,19 @@
 const newsItems = [
   {
+    "id": "evonik-baut-3-200-stellen-ab-2-150-jobs-in-deutschland-betroffen-20260922",
+    "url": "/wirtschaft/evonik-baut-3-200-stellen-ab-2-150-jobs-in-deutschland-betroffen-20260922",
+    "category": "Wirtschaft",
+    "title": "Evonik baut 3.200 Stellen ab – 2.150 Jobs in Deutschland betroffen",
+    "summary": "Evonik baut 3.200 Stellen ab – 2.150 Jobs in Deutschland betroffen. Bestätigt durch übereinstimmende aktuelle Berichte von mindestens zwei getrennten Herausgebern (AD HOC NEWS, ffh.de).",
+    "tone": "economy",
+    "glyph": "◴",
+    "featured": true,
+    "status": "Automatisch geprüft",
+    "publishedAt": "22.09.2026",
+    "readTime": "3 Min.",
+    "verified": "2 Quellen geprüft"
+  },
+  {
     "id": "evonik-baut-3-200-stellen-ab-2-150-jobs-in-deutschland-betroffen-ad-hoc-news-d-20260922",
     "url": "/wirtschaft/evonik-baut-3-200-stellen-ab-2-150-jobs-in-deutschland-betroffen-ad-hoc-news-d-20260922",
     "category": "Wirtschaft",
