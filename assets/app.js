@@ -1,5 +1,19 @@
 const newsItems = [
   {
+    "id": "evonik-baut-3-200-stellen-ab-2-150-jobs-in-deutschland-betroffen-ad-hoc-news-d-20260922",
+    "url": "/wirtschaft/evonik-baut-3-200-stellen-ab-2-150-jobs-in-deutschland-betroffen-ad-hoc-news-d-20260922",
+    "category": "Wirtschaft",
+    "title": "Evonik baut 3.200 Stellen ab – 2.150 Jobs in Deutschland betroffen - ad-hoc-news.de",
+    "summary": "Evonik baut 3.200 Stellen ab – 2.150 Jobs in Deutschland betroffen - ad-hoc-news.de. Bestätigt durch übereinstimmende aktuelle Berichte von mindestens zwei getrennten Herausgebern (ad-hoc-news.de, ffh.de).",
+    "tone": "economy",
+    "glyph": "◴",
+    "featured": true,
+    "status": "Automatisch geprüft",
+    "publishedAt": "22.09.2026",
+    "readTime": "3 Min.",
+    "verified": "2 Quellen geprüft"
+  },
+  {
     "id": "burokratie-bleibt-laut-ifo-umfrage-grotes-standortproblem-deutschlands-20260921",
     "url": "/wirtschaft/burokratie-bleibt-laut-ifo-umfrage-grotes-standortproblem-deutschlands-20260921",
     "category": "Wirtschaft",
