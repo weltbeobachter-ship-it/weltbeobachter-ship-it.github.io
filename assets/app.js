@@ -1,5 +1,19 @@
 const newsItems = [
   {
+    "id": "konjunktur-wirtschaftsinstitute-verdoppeln-konjunkturprognose-20260924",
+    "url": "/wirtschaft/konjunktur-wirtschaftsinstitute-verdoppeln-konjunkturprognose-20260924",
+    "category": "Wirtschaft",
+    "title": "Konjunktur: Wirtschaftsinstitute verdoppeln Konjunkturprognose",
+    "summary": "Konjunktur: Wirtschaftsinstitute verdoppeln Konjunkturprognose. Bestätigt durch übereinstimmende aktuelle Berichte von mindestens zwei getrennten Herausgebern (WiWo, Börsen-Zeitung).",
+    "tone": "economy",
+    "glyph": "◴",
+    "featured": true,
+    "status": "Automatisch geprüft",
+    "publishedAt": "24.09.2026",
+    "readTime": "3 Min.",
+    "verified": "2 Quellen geprüft"
+  },
+  {
     "id": "evonik-baut-3-200-stellen-ab-2-150-jobs-in-deutschland-betroffen-20260922",
     "url": "/wirtschaft/evonik-baut-3-200-stellen-ab-2-150-jobs-in-deutschland-betroffen-20260922",
     "category": "Wirtschaft",
