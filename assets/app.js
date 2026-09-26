@@ -1,5 +1,21 @@
 const newsItems = [
   {
+    "id": "europa-meeres-hitzewellen-fischerei-2026",
+    "url": "/klima/europa-meeres-hitzewellen-fischerei-2026",
+    "category": "Klima",
+    "title": "Europas Meere im Hitzesommer 2026: Folgen für die Fischerei",
+    "summary": "Eine neue Auswertung zeigt den wärmsten europäischen Meeressommer seit Beginn der Satellitenreihe. Für Deutschland sind regionale Nord- und Ostseedaten entscheidend.",
+    "tone": "climate",
+    "glyph": "≈",
+    "image": "/assets/europa-meeres-hitzewellen-fischerei-2026-editorial.webp",
+    "imageAlt": "Redaktionelle Unterwasserillustration eines europäischen Kelpwaldes in ungewöhnlich warmem Meerwasser",
+    "featured": true,
+    "status": "Verifiziert",
+    "publishedAt": "26.09.2026",
+    "readTime": "9 Min.",
+    "verified": "5 Quellen geprüft"
+  },
+  {
     "id": "konjunktur-wirtschaftsinstitute-verdoppeln-konjunkturprognose-20260924",
     "url": "/wirtschaft/konjunktur-wirtschaftsinstitute-verdoppeln-konjunkturprognose-20260924",
     "category": "Wirtschaft",
