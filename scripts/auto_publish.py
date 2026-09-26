@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Conservative Weltbeobachter auto-publisher.
+"""Legacy short-publisher safety interlock.
 
-Discovers recent low-risk stories via Google News RSS, compares three candidate
-clusters, requires two distinct publishers, publishes at most one story/run and
-six/day, updates app.js, sitemap.xml and news-sitemap.xml.
+The former RSS-only flow cannot verify a specialist primary source or attach a
+locally licensed editorial image. It must therefore never publish a standalone
+card or article. Full releases are handled by the verified editorial pipeline.
 """
 from __future__ import annotations
 import datetime as dt, email.utils, hashlib, html, json, os, re, sys, unicodedata
@@ -112,6 +112,11 @@ def update_newsmap(st):
  body.append('</urlset>'); NEWSMAP.write_text('\n'.join(body)+'\n')
 
 def main():
+ # Safety gate: do not create thin, image-less or source-incomplete articles.
+ # Keeping the workflow as a no-op preserves the existing schedule while
+ # preventing it from reintroducing cards that fail the editorial standard.
+ print('No automatic short publication: a full editorial article with a primary source and local image is required.')
+ return
  st=load_state(); today=NOW.date().isoformat(); todays=[p for p in st['published'] if p.get('time','')[:10]==today]
  if len(todays)>=MAX_DAY: print('Daily cap reached'); return
  all_items=[]

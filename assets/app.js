@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "hurrikan-polo-mexiko-landfall-baja-california-sur-2026",
+    url: "/klima/hurrikan-polo-mexiko-landfall-baja-california-sur-2026",
+    category: "Klima",
+    title: "Hurrikan Polo vor Mexiko: Landfall am Montag erwartet",
+    summary:
+      "Der Kategorie-5-Hurrikan zieht auf Baja California Sur zu. Was bestätigt ist, wo die Prognose noch unsicher bleibt und was Reisende aus Deutschland wissen müssen.",
+    tone: "climate",
+    glyph: "≈",
+    image: "/assets/hurrikan-polo-mexiko-2026-editorial.webp",
+    imageAlt: "Redaktionelle Illustration eines mächtigen Hurrikans vor der mexikanischen Halbinsel Baja California",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "26.09.2026",
+    readTime: "7 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     id: "us-china-gespraeche-zoelle-seltene-erden-2026",
     url: "/wirtschaft/us-china-gespraeche-zoelle-seltene-erden-2026",
     category: "Wirtschaft",
