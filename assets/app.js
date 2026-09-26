@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "muenchen-deutsche-olympiabewerbung-2036-2040-2044",
+    url: "/welt/muenchen-deutsche-olympiabewerbung-2036-2040-2044",
+    category: "Welt",
+    title: "München wird deutscher Olympia-Kandidat: Was der DOSB-Beschluss bedeutet",
+    summary:
+      "Der DOSB hat München als deutschen Kandidaten ausgewählt. Eine Vergabe der Spiele und das Austragungsjahr sind damit noch nicht entschieden.",
+    tone: "world",
+    glyph: "◎",
+    image: "/assets/muenchen-olympia-bewerbung-2026-editorial.webp",
+    imageAlt: "Redaktionelle Illustration des Münchner Olympiaparks mit Planunterlagen",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "26.09.2026",
+    readTime: "6 Min.",
+    verified: "2 Quellen geprüft"
+  },
+  {
     id: "hurrikan-polo-mexiko-landfall-baja-california-sur-2026",
     url: "/klima/hurrikan-polo-mexiko-landfall-baja-california-sur-2026",
     category: "Klima",
