@@ -1206,9 +1206,12 @@ function cardTemplate(item, index) {
 function renderNews() {
   const query = normalizeText(searchInput.value);
   const filtered = newsItems.filter((item) => {
+    // Only fully edited articles with a local visual are part of the public feed.
+    // Older automated short items remain archived, but are not promoted as newsroom content.
+    const isEditoriallyEligible = Boolean(item.image) && item.status !== "Automatisch geprüft";
     const matchesFilter = activeFilter === "Alle" || item.category === activeFilter;
     const haystack = normalizeText(`${item.category} ${item.title} ${item.summary}`);
-    return matchesFilter && (!query || haystack.includes(query));
+    return isEditoriallyEligible && matchesFilter && (!query || haystack.includes(query));
   });
 
   grid.innerHTML = filtered.map(cardTemplate).join("");
