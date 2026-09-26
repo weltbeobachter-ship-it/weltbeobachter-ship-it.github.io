@@ -1,5 +1,23 @@
 const newsItems = [
   {
+    id: "us-china-gespraeche-zoelle-seltene-erden-2026",
+    url: "/wirtschaft/us-china-gespraeche-zoelle-seltene-erden-2026",
+    category: "Wirtschaft",
+    title: "USA und China einigen sich auf Zollrahmen und KI-Dialog",
+    summary:
+      "Beide Regierungen bestätigen einen Rahmen für günstigere Zölle auf je 30 Milliarden Dollar nicht-sensibler Waren. Umsetzung und Folgen für deutsche Lieferketten bleiben offen.",
+    tone: "economy",
+    glyph: "◴",
+    image: "/assets/us-china-handel-seltene-erden-2026-editorial.webp",
+    imageAlt: "Mineralproben, Siliziumwafer und Elektromotor vor einem unscharfen Containerterminal",
+    featured: true,
+    status: "Aktualisiert",
+    dateLabel: "Aktualisiert",
+    publishedAt: "26.09.2026",
+    readTime: "9 Min.",
+    verified: "6 Quellen geprüft"
+  },
+  {
     "id": "europa-meeres-hitzewellen-fischerei-2026",
     "url": "/klima/europa-meeres-hitzewellen-fischerei-2026",
     "category": "Klima",
@@ -87,23 +105,6 @@ const newsItems = [
     publishedAt: "20.09.2026",
     readTime: "8 Min.",
     verified: "4 Quellen geprüft"
-  },
-  {
-    id: "us-china-gespraeche-zoelle-seltene-erden-2026",
-    url: "/wirtschaft/us-china-gespraeche-zoelle-seltene-erden-2026",
-    category: "Wirtschaft",
-    title: "US-China-Gespräche: Zölle, KI und Seltene Erden im Fokus",
-    summary:
-      "Vor dem Trump-Xi-Treffen beraten beide Seiten über Handel, kritische Rohstoffe und KI. Konkrete Ergebnisse liegen noch nicht vor.",
-    tone: "economy",
-    glyph: "◴",
-    image: "/assets/us-china-handel-seltene-erden-2026-editorial.webp",
-    imageAlt: "Mineralproben, Siliziumwafer und Elektromotor vor einem unscharfen Containerterminal",
-    featured: true,
-    status: "Verifiziert",
-    publishedAt: "20.09.2026",
-    readTime: "8 Min.",
-    verified: "5 Quellen geprüft"
   },
   {
     id: "un-generalversammlung-2026-termine-themen-deutschland",
