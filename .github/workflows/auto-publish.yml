@@ -1,6 +1,11 @@
 name: Weltbeobachter Daily Sources Monitor
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/auto-publish.yml'
+      - 'scripts/auto_publish.py'
   schedule:
     # 06:17 in Germany during winter time, 07:17 during summer time.
     - cron: '17 5 * * *'
