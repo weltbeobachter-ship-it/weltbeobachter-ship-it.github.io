@@ -1,17 +1,45 @@
-name: Weltbeobachter Editorial Safety Check
+name: Weltbeobachter Daily Sources Monitor
 
 on:
+  schedule:
+    # 06:17 in Germany during winter time, 07:17 during summer time.
+    - cron: '17 5 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: weltbeobachter-daily-publish
+  cancel-in-progress: false
 
 jobs:
-  safety-check:
+  publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Checkout
+      - name: Checkout current site
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
-      - name: Confirm legacy short publisher remains disabled
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Build verified daily sources monitor
         run: python scripts/auto_publish.py
+
+      - name: Commit only a complete publication
+        shell: bash
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo 'No new verified source cluster was available.'
+            exit 0
+          fi
+          git config user.name 'weltbeobachter-publisher'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/app.js data/auto-publish-state.json news-sitemap.xml sitemap.xml welt/
+          git commit -m "Publish daily verified sources monitor"
+          git push
