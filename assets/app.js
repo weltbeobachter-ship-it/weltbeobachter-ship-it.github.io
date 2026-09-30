@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "eu-rechenzentren-effizienzlabel-energie-wasser-2026",
+    url: "/technologie/eu-rechenzentren-effizienzlabel-energie-wasser-2026",
+    category: "Technologie",
+    title: "EU plant Effizienzlabel für Rechenzentren",
+    summary:
+      "Das geplante EU-Label vergleicht Energie, Wasser, Abwärme und Netzbeitrag großer Rechenzentren. Verbindliche Verbrauchsgrenzen sind noch nicht beschlossen.",
+    tone: "technology",
+    glyph: "◇",
+    image: "/assets/meta-muse-ki-agent-serverracks.webp",
+    imageAlt: "Beleuchtete Serverracks in einem Computerraum des NOIRLab in Tucson",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "30.09.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     "id": "quellenmonitor-2026-09-30",
     "url": "/welt/quellenmonitor-2026-09-30",
     "category": "Welt",
