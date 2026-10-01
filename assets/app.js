@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "dama-solar-rumaenien-finanzierung-2026",
+    url: "/energie/dama-solar-rumaenien-finanzierung-2026",
+    category: "Energie",
+    title: "Dama Solar: 561 Millionen Euro für Europas Solar-Ausbau",
+    summary:
+      "Ein 14-köpfiges Konsortium finanziert den geplanten 1,3-Gigawatt-Solarpark in Rumänien. Der Bau kann beginnen, die Inbetriebnahme ist für 2028 geplant.",
+    tone: "energy",
+    glyph: "↯",
+    image: "/assets/dama-solar-rumaenien-ratesti-symbolbild.webp",
+    imageAlt: "Luftaufnahme des Solarparks Rătești in Rumänien",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "01.10.2026",
+    readTime: "8 Min.",
+    verified: "4 Quellen geprüft"
+  },
+  {
     id: "eu-rechenzentren-effizienzlabel-energie-wasser-2026",
     url: "/technologie/eu-rechenzentren-effizienzlabel-energie-wasser-2026",
     category: "Technologie",
