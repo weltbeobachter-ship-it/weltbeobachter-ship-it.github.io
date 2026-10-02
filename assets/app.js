@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "oekostrom-60-7-prozent-deutschland-drei-quartale-2026",
+    url: "/energie/oekostrom-60-7-prozent-deutschland-drei-quartale-2026",
+    category: "Energie",
+    title: "Ökostrom deckt 60,7 Prozent des Stromverbrauchs",
+    summary:
+      "Wind und Solar heben den Erneuerbaren-Anteil in Deutschland auf einen Neunmonatsrekord. Warum die vorläufige Quote noch keine Zielerreichung für 2030 bedeutet.",
+    tone: "energy",
+    glyph: "↯",
+    image: "/assets/windpark-rossdorf-oekostrom-rekord-2026.webp",
+    imageAlt: "Zwei Windenergieanlagen im Windpark Roßdorf in Hessen",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "02.10.2026",
+    readTime: "7 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "dama-solar-rumaenien-finanzierung-2026",
     url: "/energie/dama-solar-rumaenien-finanzierung-2026",
     category: "Energie",
