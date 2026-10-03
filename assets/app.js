@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "bundesbank-deutschland-wachstum-ein-prozent-2026",
+    url: "/wirtschaft/bundesbank-deutschland-wachstum-ein-prozent-2026",
+    category: "Wirtschaft",
+    title: "Bundesbank sieht rund ein Prozent Wachstum",
+    summary:
+      "Deutschlands Wirtschaft könnte 2026 etwa doppelt so stark wachsen wie im Juni prognostiziert. Warum das noch keinen dauerhaften Aufschwung belegt.",
+    tone: "economy",
+    glyph: "↗",
+    image: "/assets/bundesbank-frankfurt-wachstum-2026.webp",
+    imageAlt: "Luftaufnahme der Deutschen Bundesbank und des Europaturms in Frankfurt am Main",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "03.10.2026",
+    readTime: "7 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "oekostrom-60-7-prozent-deutschland-drei-quartale-2026",
     url: "/energie/oekostrom-60-7-prozent-deutschland-drei-quartale-2026",
     category: "Energie",
