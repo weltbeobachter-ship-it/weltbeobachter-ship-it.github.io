@@ -1,5 +1,22 @@
 const newsItems = [
   {
+    id: "eib-bnp-paribas-stromnetz-garantien-europa-2026",
+    url: "/energie/eib-bnp-paribas-stromnetz-garantien-europa-2026",
+    category: "Energie",
+    title: "700 Millionen Euro Garantien für Europas Stromnetze",
+    summary:
+      "EIB und BNP Paribas erweitern den Finanzierungsspielraum für Netztechnik-Hersteller. Warum das bis zu 2,8 Milliarden Euro Investitionen ermöglichen soll.",
+    tone: "energy",
+    glyph: "↯",
+    image: "/assets/umspannwerk-rheinau-stromnetz-europa.webp",
+    imageAlt: "Freiluft-Umspannwerk Rheinau in Mannheim mit Transformatoren, Leitungen und Stahlmasten",
+    featured: true,
+    status: "Verifiziert",
+    publishedAt: "04.10.2026",
+    readTime: "7 Min.",
+    verified: "3 Quellen geprüft"
+  },
+  {
     id: "bundesbank-deutschland-wachstum-ein-prozent-2026",
     url: "/wirtschaft/bundesbank-deutschland-wachstum-ein-prozent-2026",
     category: "Wirtschaft",
