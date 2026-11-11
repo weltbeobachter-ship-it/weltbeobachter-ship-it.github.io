@@ -1,5 +1,21 @@
 const newsItems = [
   {
+    "id": "quellenmonitor-2026-11-11",
+    "url": "/welt/quellenmonitor-2026-11-11",
+    "category": "Welt",
+    "title": "Quellenmonitor vom 11. November 2026: 1 Thema im Vergleich",
+    "summary": "Aktuelle mehrfach berichtete Themen im transparenten Quellenvergleich – mit 2 getrennten Herausgebern, Meldungslinks und klaren Grenzen der automatischen Prüfung.",
+    "tone": "world",
+    "glyph": "◎",
+    "image": "/assets/hero-world-observatory.webp",
+    "imageAlt": "Redaktionelle Weltkarte mit Lichtpunkten als Symbol für den täglichen Quellenvergleich",
+    "featured": true,
+    "status": "Quellenmonitor",
+    "publishedAt": "11.11.2026",
+    "readTime": "4 Min.",
+    "verified": "2 Herausgeber verglichen"
+  },
+  {
     id: "eib-bnp-paribas-stromnetz-garantien-europa-2026",
     url: "/energie/eib-bnp-paribas-stromnetz-garantien-europa-2026",
     category: "Energie",
