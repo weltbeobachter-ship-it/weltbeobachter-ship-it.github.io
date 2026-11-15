@@ -11,6 +11,9 @@ class MagazineFeedTest(unittest.TestCase):
 
     def test_release(self):
         self.assertEqual(self.feed([self.item])["products"], [self.item])
+        self.assertFalse(self.feed([self.item])["linksEnabled"])
+        self.assertTrue(make_feed(dict(schema=1, mode="published", linksEnabled=True, products=[self.item]))["linksEnabled"])
+        with self.assertRaises(ValueError): make_feed(dict(schema=1, mode="published", linksEnabled="true", products=[self.item]))
 
     def test_block_preview_and_private_fields(self):
         with self.assertRaises(ValueError): self.feed([self.item], "preview")

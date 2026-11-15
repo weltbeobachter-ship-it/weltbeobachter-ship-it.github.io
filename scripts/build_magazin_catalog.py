@@ -14,7 +14,7 @@ FIELDS = {"id", "name", "brand", "category", "approved"}
 
 
 def make_feed(data):
-    if not isinstance(data, dict) or set(data) != {"schema", "mode", "products"} or data["schema"] != 1 or data["mode"] != "published":
+    if not isinstance(data, dict) or set(data) not in ({"schema", "mode", "products"}, {"schema", "mode", "linksEnabled", "products"}) or data["schema"] != 1 or data["mode"] != "published" or ("linksEnabled" in data and type(data["linksEnabled"]) is not bool):
         raise ValueError("A published-only export is required")
     products = data["products"]
     if not isinstance(products, list) or len(products) > 10000:
@@ -32,7 +32,7 @@ def make_feed(data):
             if not isinstance(value, str) or not value.strip() or len(value) > length or any(ord(c) < 32 for c in value):
                 raise ValueError("Invalid display text")
         ids.add(item["id"])
-    return {"schema": 1, "mode": "published", "products": products}
+    return {"schema": 1, "mode": "published", "linksEnabled": data.get("linksEnabled", False), "products": products}
 
 
 if __name__ == "__main__":
