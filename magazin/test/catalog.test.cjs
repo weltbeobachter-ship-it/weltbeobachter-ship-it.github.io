@@ -1,0 +1,8 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {decode,productLink,match,group}=require('../assets/magazin.js');
+const product={id:'example-parfum',name:'Demo Duft',brand:'Demo',category:'fragrance'};
+test('release gate and no internal data',()=>{assert.deepEqual(decode({schema:1,mode:'pending',products:[]}).products,[]);assert.throws(()=>decode({schema:1,mode:'pending',products:[product]}));assert.throws(()=>decode({schema:1,mode:'published',products:[product]}));assert.throws(()=>decode({schema:1,mode:'preview',products:[{...product,cost:4}]}));assert.equal(decode({schema:1,mode:'published',products:[{...product,approved:true}]}).products.length,1);});
+test('duplicate or invalid product rejected',()=>{assert.throws(()=>decode({schema:1,mode:'preview',products:[product,product]}));assert.throws(()=>productLink('https://evil.test'));assert.throws(()=>productLink('x&redirect=evil'));});
+test('safe exact HTTPS link',()=>assert.equal(productLink(product.id),'https://beqva.de/app/product?product=example-parfum'));
+test('search brand and categories',()=>{assert.equal(match([product],'demo duft','fragrance','Demo').length,1);assert.equal(match([product],'nope','all','all').length,0);assert.equal(match([product],'','skin','all').length,0);assert.equal(group('korean-skincare'),'skin');});
+test('631 item snapshot supported',()=>{const items=Array.from({length:631},(_,i)=>({...product,id:'demo-'+i}));assert.equal(decode({schema:1,mode:'preview',products:items}).products.length,631);});
