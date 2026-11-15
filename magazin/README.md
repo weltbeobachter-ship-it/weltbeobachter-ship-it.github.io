@@ -15,3 +15,9 @@ The product lexicon is open by default, with filters, page increments, and an al
 Before public deployment: verify Impressum/Datenschutz, editorial and advertising disclosures, use approved product assets only, verify redirects and destination availability, and set up the independent Cloudflare project `beqva-magazin` and sitemap. Keep the current BEQVA store/production, DNS and apps untouched until separately authorized. Reconfigure automation separately around a verified first-party export and reviewable editorial drafts, not the old RSS monitor.
 
 Run `node --test magazin/test/catalog.test.cjs` and `python -m unittest discover -s scripts -p 'test_*.py'` from repository root. Preview with `python -m http.server 8000 --directory magazin`.
+
+## Product-led editorial preview — 15 November 2026
+
+The updated layout supports original packshots in the cover, editorial stories, campaign carousel, recommendations, product register and detail dialogs. An owner-private, standalone HTML review copy embeds all 631 matching primary packshots from BEQVA source commit `718cf5a192784dcfc1e9053e27b74cdaaf292fcb`, `src/data/previewPhotoCatalog.json`. Exact product IDs are used; no generated product packaging or prices. The private copy uses preview mode, `linksEnabled:false`, and does not mark image rights approved. All 631 sources matched; the source catalogue marks image rights unverified. No private image bytes are committed to this public repository.
+
+Standalone rendering accepts JSON script elements `catalog-data` and `product-images`; the latter maps exact product IDs to embedded image data. Normal hosted rendering still reads the local feed and local asset paths. Private previews must never be substituted for an approved public release export. The application-link integration remains deferred.
