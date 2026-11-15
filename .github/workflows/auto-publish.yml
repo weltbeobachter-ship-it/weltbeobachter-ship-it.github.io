@@ -1,4 +1,4 @@
-name: Weltbeobachter Daily Sources Monitor
+name: HeuteBlick Sources Monitor
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
       - '.github/workflows/auto-publish.yml'
       - 'scripts/auto_publish.py'
   schedule:
-    # 06:17 in Germany during winter time, 07:17 during summer time.
-    - cron: '17 5 * * *'
+    # Three opportunities per day; the script publishes no more than one roundup per Berlin date.
+    - cron: '17 5,11,17 * * *'
   workflow_dispatch:
 
 permissions:
@@ -39,12 +39,12 @@ jobs:
       - name: Commit only a complete publication
         shell: bash
         run: |
-          if git diff --quiet && git diff --cached --quiet; then
-            echo 'No new verified source cluster was available.'
-            exit 0
-          fi
           git config user.name 'weltbeobachter-publisher'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/app.js data/auto-publish-state.json news-sitemap.xml sitemap.xml welt/
-          git commit -m "Publish daily verified sources monitor"
+          if git diff --cached --quiet; then
+            echo 'No new publication or sitemap update.'
+            exit 0
+          fi
+          git commit -m "Update HeuteBlick sources monitor"
           git push
