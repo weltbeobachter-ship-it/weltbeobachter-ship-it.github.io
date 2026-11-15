@@ -20,3 +20,9 @@ class MagazineFeedTest(unittest.TestCase):
     def test_duplicate_and_invalid_identity(self):
         with self.assertRaises(ValueError): self.feed([self.item, self.item])
         with self.assertRaises(ValueError): self.feed([dict(self.item, id="https://example.com")])
+
+    def test_photos_need_exact_path_and_rights(self):
+        image = "assets/products/example-duft.webp"
+        self.assertEqual(self.feed([dict(self.item, image=image, imageApproved=True)])["products"][0]["image"], image)
+        with self.assertRaises(ValueError): self.feed([dict(self.item, image=image, imageApproved=False)])
+        with self.assertRaises(ValueError): self.feed([dict(self.item, image="https://example.com/a.webp", imageApproved=True)])

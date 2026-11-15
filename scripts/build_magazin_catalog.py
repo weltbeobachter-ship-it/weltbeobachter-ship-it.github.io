@@ -21,10 +21,12 @@ def make_feed(data):
         raise ValueError("Invalid product list")
     ids = set()
     for item in products:
-        if not isinstance(item, dict) or set(item) != FIELDS or item["approved"] is not True:
+        if not isinstance(item, dict) or not FIELDS.issubset(item) or set(item)-FIELDS not in (set(), {"image", "imageApproved"}) or item["approved"] is not True:
             raise ValueError("Unapproved item or unexpected fields")
         if any(not isinstance(item[k], str) or not ID.fullmatch(item[k]) for k in ("id", "category")) or item["id"] in ids:
             raise ValueError("Invalid or duplicate identity")
+        if "image" in item and (item["image"] != f"assets/products/{item['id']}.webp" or item["imageApproved"] is not True):
+            raise ValueError("Unapproved or mismatched product photo")
         for key, length in (("name", 240), ("brand", 100)):
             value = item[key]
             if not isinstance(value, str) or not value.strip() or len(value) > length or any(ord(c) < 32 for c in value):
