@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Generate the initial, source-linked editorial guides and their static index."""
+import html
+import json
+from pathlib import Path
+import xml.etree.ElementTree as ET
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = 'https://weltbeobachter-ship-it.github.io'
+DATE = '2026-11-15'
+GUIDES = [
+    dict(slug='black-friday-2026', category='Shopping', tone='shopping', glyph='%', title='Black Friday 2026: So erkennen Sie echte Angebote', summary='Preisverlauf, Wunschliste und sichere Shops – die Checkliste vor dem Kauf.', sections=[
+        ('Warum ein Rabatt allein wenig aussagt', 'Am 27. November 2026 ist Black Friday. Eine BCG-Befragung aus dem Oktober 2026 zeigt, dass 74 Prozent der befragten deutschen Verbraucher bei den großen Rabattaktionen einkaufen wollen. Die Kaufabsicht ist allerdings keine Garantie für einen günstigen Preis.'),
+        ('Vor dem Kauf: drei Preise notieren', 'Notieren Sie den aktuellen Gesamtpreis einschließlich Versand, die Preise anderer Händler und den bisherigen Preisverlauf. Vergleichen Sie exakt dieselbe Modellnummer, Menge oder Ausstattung. Ein hoher Prozentwert gegenüber einer unverbindlichen Preisempfehlung sagt wenig über die tatsächliche Ersparnis aus.'),
+        ('Fakeshops vermeiden', 'Kontrollieren Sie das Impressum, die Rückgabebedingungen und die angebotenen Zahlungsmethoden. Bei einem auffällig niedrigen Preis und ausschließlich Vorkasse ist besondere Vorsicht sinnvoll. Nutzen Sie im Zweifel den Fakeshop-Finder der Verbraucherzentrale.'),
+        ('Eine Wunschliste statt spontaner Käufe', 'Legen Sie vorab ein Budget fest und entscheiden Sie, welche Produkte Sie ohnehin benötigen. Ein Preisalarm kann helfen, auf einen vordefinierten Zielpreis zu warten. Es gibt keine Verpflichtung, während der Aktionswoche zu kaufen.')], sources=[('BCG: Year-End Sales Events Consumer Study 2026','https://www.bcg.com/press/4november2026-nur-37-prozent-der-deutschen-trauen-rabattaktionen-zu-black-friday'),('Verbraucherzentrale: Tipps für die Schnäppchenjagd','https://www.verbraucherzentrale.de/wissen/digitale-welt/onlinehandel/prime-days-black-friday-cyber-monday-tipps-fuer-die-schnaeppchenjagd-37835')]),
+    dict(slug='parfum-geschenke', category='Beauty', tone='beauty', glyph='✦', title='Parfum verschenken: Welcher Duft passt?', summary='Duftfamilien, Flakongrößen und Geschenkideen – ohne unnötige Fehlkäufe.', sections=[
+        ('Warum Duftsets als Geschenk interessant sind', 'Google stellte im November 2026 seine saisonale Holiday-100-Auswahl vor. In der dort ausgewerteten Suche gehörten Parfumsets zur führenden Art von Geschenksets. Das ist ein Hinweis auf die saisonale Nachfrage, keine Rangliste deutscher Verkaufszahlen.'),
+        ('Den Geschmack statt den Trend wählen', 'Schauen Sie, welche Düfte die beschenkte Person bereits gerne verwendet. Frische Zitrusnoten wirken anders als holzige, würzige oder süße Duftkompositionen. Bei unsicherem Geschmack kann ein kleines Set mit verschiedenen Proben sinnvoller sein als ein großer Flakon.'),
+        ('Größe, Konzentration und Preis vergleichen', 'Vergleichen Sie die Produktbezeichnung, das Volumen und den Gesamtpreis. Eau de Toilette und Eau de Parfum unterscheiden sich häufig in der Konzentration, doch die tatsächliche Haltbarkeit hängt auch von der Zusammensetzung ab. Ein höherer Preis ist kein verlässlicher Beweis für eine bessere Eignung.'),
+        ('Ein kurzer Geschenk-Check', 'Budget bestimmen, Duftvorlieben beobachten, Originalverpackung und Anbieter prüfen und Rückgabeinformationen lesen. Bei bekannten Duftstoffunverträglichkeiten sollte der persönliche Bedarf Vorrang vor einer Überraschung haben. Wir empfehlen hier keine einzelnen Händler und veröffentlichen keine bezahlte Rangliste.')], sources=[('Google: Holiday 100, 2026','https://blog.google/products-and-platforms/products/shopping/holiday-100-gift-guide-2026/'),('IKW: Jahresbericht 2025/2026','https://www.ikw.org/jahresbericht/2025-2026')]),
+    dict(slug='stromrechnung-pruefen', category='Alltag', tone='energy', glyph='€', title='Stromrechnung prüfen: Verbrauch und Abschlag verstehen', summary='Mit Zählerständen und Tarifen die eigene Jahresrechnung nachvollziehen.', sections=[
+        ('Den tatsächlichen Verbrauch ermitteln', 'Suchen Sie den Anfangs- und Endzählerstand des Abrechnungszeitraums. Die Differenz in Kilowattstunden ist bei einem gewöhnlichen Stromzähler der Verbrauch. Prüfen Sie, ob die Rechnung einen gemessenen oder geschätzten Wert verwendet.'),
+        ('Die Kosten nachrechnen', 'Multiplizieren Sie den Verbrauch in kWh mit dem Arbeitspreis in Euro je kWh. Addieren Sie den anteiligen Grundpreis und gegebenenfalls einen getrennten Messpreis. Wenn sich der Tarif während der Abrechnung änderte, berechnen Sie die Abschnitte getrennt.'),
+        ('Ein Rechenbeispiel', 'Bei 2.000 kWh zu 0,30 Euro je kWh und 120 Euro Jahresgrundpreis ergeben sich 720 Euro im Jahr, also 60 Euro pro Monat. Das ist ein frei gewähltes Beispiel und kein aktueller Stromtarif.'),
+        ('Abschläge und Belege vergleichen', 'Ziehen Sie die bereits geleisteten Abschläge von den berechneten Kosten ab. Bei Abweichungen sammeln Sie Zählerfotos, Ablesedatum und Vertragsdaten. Bitten Sie den Anbieter um eine nachvollziehbare Korrektur; die Verbraucherzentrale bietet dafür weitere Orientierung.')],sources=[('Verbraucherzentrale: Rechnung und Abschläge prüfen','https://www.verbraucherzentrale.de/wissen/energie/probleme-mit-vertraegen-und-rechnungen/stimmen-rechnung-und-abschlaege-fuer-strom-oder-gas-23268'),('Verbraucherzentrale: Abschlagsrechner','https://www.verbraucherzentrale.de/wissen/energie/preise-tarife-anbieterwechsel/rechner-das-ist-ihr-passender-abschlag-fuer-strom-gas-oder-fernwaerme-75669')]),
+    dict(slug='ki-antworten-pruefen', category='Technologie', tone='technology', glyph='AI', title='KI-Antworten richtig überprüfen: 4 einfache Schritte', summary='Verlässliche Quellen erkennen und Angaben eines KI-Assistenten selbst überprüfen.', sections=[
+        ('Warum Quellen wichtig bleiben', 'Der Reuters Institute Digital News Report 2026 für Deutschland ermittelte, dass fünf Prozent der Befragten KI-Chatbots zur Nachrichteninformation nutzen. Auch eine flüssig formulierte Antwort kann unvollständige oder veraltete Informationen enthalten.'),
+        ('1. Originalquelle öffnen', 'Bitten Sie um einen Link zur ursprünglichen Veröffentlichung. Prüfen Sie, ob die verlinkte Seite die konkrete Aussage wirklich stützt. Eine Quellenangabe allein beweist noch nichts.'),
+        ('2. Datum und Kontext kontrollieren', 'Vergleichen Sie das Veröffentlichungsdatum und den Geltungsbereich einer Information. Angaben aus anderen Ländern, ältere Preise und abweichende Begriffe können zu falschen Schlüssen führen.'),
+        ('3. Zweite Quelle suchen; 4. sensible Daten schützen', 'Bei wichtigen Entscheidungen hilft eine unabhängige zweite Quelle, idealerweise eine zuständige Behörde oder ein Originaldokument. Geben Sie keine Passwörter, Ausweisfotos oder vertraulichen Kundendaten in einen beliebigen KI-Dienst ein. Lassen Sie Gesundheits-, Rechts- und Finanzentscheidungen fachlich prüfen.')], sources=[('Leibniz-Institut: Digital News Report 2026','https://leibniz-hbi.de/hbi-news/presseinfo/nachrichtennutzung-ueber-soziale-medien-steigt/')]),
+    dict(slug='fussball-termine', category='Sport', tone='sport', glyph='⚽', title='Fußball: Wo finde ich aktuelle Spieltermine und Tabellen?', summary='Offizielle Spielpläne für Nationalmannschaft und Bundesliga schnell finden.', sections=[
+        ('Nationalmannschaft: der direkte Weg zum DFB', 'Der Deutsche Fußball-Bund stellt Spieltermine, Ergebnisse, Stadien und weitere Angaben zu den Länderspielen auf seiner offiziellen Internetseite bereit. Für die Nations League ist auch der Saisonplan im DFB-Datencenter eine gute Anlaufstelle.'),
+        ('Bundesliga: Spieltag und Tabelle', 'Die offizielle Bundesliga-Seite bietet den aktuellen Spielplan und die Tabelle. Wählen Sie dort die richtige Saison und den gewünschten Spieltag. Bei kurzfristigen Verlegungen ist ein aktueller Blick auf die Originalseite sinnvoll.'),
+        ('Termine statt Gerüchte speichern', 'Notieren Sie für ein Spiel Datum, Anstoßzeit und die bestätigte Übertragung separat. Die Angaben können sich ändern und in anderen Zeitzonen abweichen. Wir verlinken die offiziellen Übersichten statt ungeprüfte Live-Ergebnisse zu übernehmen.')], sources=[('DFB: Spiele und Termine','https://www.dfb.de/maenner/nationalmannschaften/nationalmannschaft/spiele-und-termine'),('Bundesliga: Spielplan','https://www.bundesliga.com/de/bundesliga/spieltag/2026-2027'),('Bundesliga: Tabelle','https://www.bundesliga.com/de/bundesliga/tabelle')]),
+]
+
+def e(x): return html.escape(str(x), quote=True)
+
+def main():
+    entries = []
+    sitemap = ROOT / 'sitemap.xml'
+    xml = sitemap.read_text(encoding='utf-8')
+    for g in GUIDES:
+        path = '/ratgeber/' + g['slug']
+        url = BASE + path
+        body = ''.join(f'<h2>{e(h)}</h2><p>{e(p)}</p>' for h,p in g['sections'])
+        links = ''.join(f'<li><a href="{e(u)}" rel="noopener noreferrer external">{e(n)}</a></li>' for n,u in g['sources'])
+        structured = json.dumps({'@context':'https://schema.org','@type':'Article','headline':g['title'],'description':g['summary'],'datePublished':DATE,'dateModified':DATE,'author':{'@type':'Organization','name':'HeuteBlick'},'publisher':{'@type':'Organization','name':'HeuteBlick'},'mainEntityOfPage':url,'inLanguage':'de-DE'},ensure_ascii=False).replace('<','\\u003c')
+        document = f'''<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{e(g['summary'])}"><meta name="robots" content="index,follow"><meta property="og:site_name" content="HeuteBlick"><meta property="og:title" content="{e(g['title'])}"><meta property="og:type" content="article"><meta property="og:url" content="{url}"><link rel="canonical" href="{url}"><link rel="icon" href="/assets/heuteblick.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/magazine.css"><title>{e(g['title'])} | HeuteBlick</title><script type="application/ld+json">{structured}</script></head><body><header class="mast"><div class="wrap brand-row"><a href="/" class="wordmark"><img src="/assets/heuteblick.svg" width="44" height="44" alt=""><span>Heute<span class="accent">Blick</span></span></a><a class="search-link" href="/#entdecken">Alle Themen</a></div></header><main class="wrap"><article class="article"><a class="back" href="/">← Startseite</a><p class="eyebrow">{e(g['category'].upper())} · RATGEBER</p><h1>{e(g['title'])}</h1><p class="deck">{e(g['summary'])}</p><p class="article-meta">HeuteBlick · Veröffentlicht: 15. November 2026 · 4 Min. Lesezeit</p>{body}<aside class="ad-slot" data-ad-slot="article-inline" hidden></aside><section class="source-list"><h2>Quellen und weiterführende Informationen</h2><ul>{links}</ul><p>Quellenstand: 15. November 2026. Hinweise und Korrekturen: <a href="/kontakt">Kontakt</a>.</p></section></article></main><footer class="foot"><div class="wrap foot-row"><a class="footer-brand" href="/">Heute<span>Blick</span></a><nav><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a><a href="/kontakt">Kontakt</a><a href="/redaktionsgrundsaetze">Redaktionsgrundsätze</a></nav></div></footer></body></html>'''
+        out = ROOT / path.lstrip('/') / 'index.html'
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(document + '\n', encoding='utf-8')
+        entries.append(dict(id=g['slug'],url=path,category=g['category'],title=g['title'],summary=g['summary'],tone=g['tone'],glyph=g['glyph'],status='Ratgeber',publishedAt='15.11.2026',readTime='4 Min.',verified='Quellen verlinkt'))
+        if f'<loc>{url}</loc>' not in xml:
+            xml = xml.replace('</urlset>',f'  <url><loc>{url}</loc><lastmod>{DATE}</lastmod></url>\n</urlset>')
+    ET.fromstring(xml)
+    sitemap.write_text(xml,encoding='utf-8')
+    (ROOT/'assets'/'guides.js').write_text('const guideItems = '+json.dumps(entries,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
+
+if __name__ == '__main__': main()

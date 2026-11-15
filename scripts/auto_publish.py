@@ -37,11 +37,26 @@ IMAGE = "/assets/hero-world-observatory.webp"
 IMAGE_ALT = "Redaktionelle Weltkarte mit Lichtpunkten als Symbol für den täglichen Quellenvergleich"
 
 QUERIES = (
-    ("Wirtschaft", "Wirtschaft Deutschland Unternehmen Konjunktur Energie -Sport -Promi -Krieg -Wahl"),
-    ("Technologie", "Technologie KI Forschung Raumfahrt Deutschland Europa -Sport -Promi -Krieg -Wahl"),
-    ("Klima", "Klima Energie Wetter Forschung Deutschland Europa -Sport -Promi -Krieg -Wahl"),
-    ("Wissenschaft", "Wissenschaft Forschung Universität Deutschland Europa -Sport -Promi -Krieg -Wahl"),
+    ("Alltag", "Strompreise Deutschland -Krieg -Wahl"),
+    ("Alltag", "Verbraucher Alltag Deutschland -Krieg -Wahl"),
+    ("Technologie", "KI Technologie Deutschland -Krieg -Wahl"),
+    ("Technologie", "Smartphone Technik -Krieg -Wahl"),
+    ("Sport", "Bundesliga Fußball -Verletzung -Krieg -Wahl"),
+    ("Sport", "Fußball Nationalmannschaft -Verletzung -Krieg -Wahl"),
+    ("Shopping", "Online Shopping Angebote Deutschland -Krieg -Wahl"),
+    ("Shopping", "Geschenkideen Verbraucher Deutschland -Krieg -Wahl"),
+    ("Beauty", "Parfum Kosmetik Trends -Krieg -Wahl"),
+    ("Beauty", "Hautpflege Haarpflege Beauty -Krieg -Wahl"),
 )
+
+TREND_FEED = 'https://trends.google.com/trending/rss?geo=DE'
+TREND_TERMS = {
+    'Sport': ('bundesliga', 'fussball', 'nations league', 'champions league'),
+    'Technologie': ('iphone', 'android', 'chatgpt', 'playstation', 'smartphone', 'software'),
+    'Alltag': ('strompreis', 'stromrechnung', 'energiepreis', 'verbraucher'),
+    'Beauty': ('parfum', 'kosmetik', 'hautpflege', 'haarpflege'),
+    'Shopping': ('black friday', 'cyber monday', 'geschenk', 'rabatt', 'shopping'),
+}
 
 # Topics that require human editorial review rather than unattended grouping.
 SENSITIVE = (
@@ -78,7 +93,7 @@ def fetch(url: str) -> bytes:
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "WeltbeobachterSourcesMonitor/2.0 (+https://weltbeobachter-ship-it.github.io/redaktionsgrundsaetze)"
+            "User-Agent": "HeuteBlickSourcesMonitor/2.0 (+https://weltbeobachter-ship-it.github.io/redaktionsgrundsaetze)"
         },
     )
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -93,8 +108,38 @@ def words(value: str) -> set[str]:
     return {
         word
         for word in re.findall(r"[a-z0-9]{4,}", ascii_text(value))
-        if word not in STOP
+        if word not in {ascii_text(term) for term in STOP}
     }
+
+
+def valid_http_url(value: str) -> bool:
+    try:
+        parsed = urllib.parse.urlsplit(value)
+        return parsed.scheme in ('https', 'http') and bool(parsed.hostname) and not parsed.username and not parsed.password
+    except ValueError:
+        return False
+
+
+def source_key(row: dict[str, object]) -> str:
+    return (urllib.parse.urlsplit(str(row['source_url'])).hostname or '').lower().removeprefix('www.')
+
+
+def trend_queries() -> list[tuple[str, str]]:
+    """Use public search trends as leads, never as evidence for a factual claim."""
+    root = ET.fromstring(fetch(TREND_FEED))
+    leads = []
+    for node in root.findall('.//item')[:30]:
+        title = re.sub(r'\s+', ' ', (node.findtext('title') or '').strip())
+        normalized = ascii_text(title)
+        if not 3 <= len(title) <= 90 or any(ascii_text(term) in normalized for term in SENSITIVE):
+            continue
+        for category, terms in TREND_TERMS.items():
+            if any(term in normalized for term in terms):
+                leads.append((category, f'{title} -Krieg -Wahl'))
+                break
+        if len(leads) >= 3:
+            break
+    return leads
 
 
 def clean_title(title: str, publisher: str) -> str:
@@ -121,7 +166,7 @@ def parse_feed(category: str, query: str, now: dt.datetime) -> list[dict[str, ob
         raw_title = (node.findtext("title") or "").strip()
         link = (node.findtext("link") or "").strip()
         raw_date = (node.findtext("pubDate") or "").strip()
-        if not publisher or not raw_title or not link:
+        if not publisher or not raw_title or not valid_http_url(link) or not valid_http_url(source_url):
             continue
 
         try:
@@ -131,9 +176,9 @@ def parse_feed(category: str, query: str, now: dt.datetime) -> list[dict[str, ob
 
         title = clean_title(raw_title, publisher)
         lowered = ascii_text(title)
-        if now - published > dt.timedelta(hours=32):
+        if now - published > dt.timedelta(hours=32) or published > now:
             continue
-        if any(term in lowered for term in SENSITIVE):
+        if any(ascii_text(term) in lowered for term in SENSITIVE):
             continue
         if len(words(title)) < 3:
             continue
@@ -170,12 +215,10 @@ def cluster_items(items: list[dict[str, object]]) -> list[list[dict[str, object]
                 best_group, best_score = group, score
         if best_group is None:
             groups.append([item])
-        elif str(item["publisher"]).casefold() not in {
-            str(existing["publisher"]).casefold() for existing in best_group
-        }:
+        elif source_key(item) not in {source_key(existing) for existing in best_group} and str(item['publisher']).casefold() not in {str(existing['publisher']).casefold() for existing in best_group}:
             best_group.append(item)
 
-    valid = [group for group in groups if len({str(row["publisher"]).casefold() for row in group}) >= 2]
+    valid = [group for group in groups if len({source_key(row) for row in group}) >= 2]
     valid.sort(
         key=lambda group: (
             len({str(row["publisher"]).casefold() for row in group}),
@@ -248,18 +291,18 @@ def article_html(groups: list[list[dict[str, object]]], now: dt.datetime, url: s
                 "dateModified": now.isoformat(timespec="seconds"),
                 "inLanguage": "de-DE",
                 "image": {"@type": "ImageObject", "url": BASE + IMAGE},
-                "author": {"@type": "Organization", "name": "Redaktion Weltbeobachter", "url": BASE + "/"},
+                "author": {"@type": "Organization", "name": "Redaktion HeuteBlick", "url": BASE + "/"},
                 "publisher": {
                     "@type": "Organization",
-                    "name": "Weltbeobachter",
+                    "name": "HeuteBlick",
                     "url": BASE + "/",
-                    "logo": {"@type": "ImageObject", "url": BASE + "/assets/weltbeobachter-icon.png"},
+                    "logo": {"@type": "ImageObject", "url": BASE + "/assets/heuteblick.svg"},
                 },
             },
             {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Weltbeobachter", "item": BASE + "/"},
+                    {"@type": "ListItem", "position": 1, "name": "HeuteBlick", "item": BASE + "/"},
                     {"@type": "ListItem", "position": 2, "name": title, "item": url},
                 ],
             },
@@ -274,7 +317,7 @@ def article_html(groups: list[list[dict[str, object]]], now: dt.datetime, url: s
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="theme-color" content="#0a1923" />
     <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="Weltbeobachter" />
+    <meta property="og:site_name" content="HeuteBlick" />
     <meta property="og:title" content="{escape(title)}" />
     <meta property="og:description" content="{escape(summary)}" />
     <meta property="og:url" content="{escape(url)}" />
@@ -282,23 +325,23 @@ def article_html(groups: list[list[dict[str, object]]], now: dt.datetime, url: s
     <meta property="og:image:alt" content="{escape(IMAGE_ALT)}" />
     <meta property="article:published_time" content="{now.isoformat(timespec='seconds')}" />
     <link rel="canonical" href="{escape(url)}" />
-    <title>{escape(title)} | Weltbeobachter</title>
+    <title>{escape(title)} | HeuteBlick</title>
     <link rel="stylesheet" href="/assets/styles.css" />
-    <meta name="google-adsense-account" content="ca-pub-5363022928370906" />
+
     <script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-    <header class="legal-header"><div class="shell legal-nav"><a class="brand" href="/" aria-label="Weltbeobachter – Startseite"><span class="brand-mark" aria-hidden="true"><i></i></span><span class="brand-copy"><strong>Weltbeobachter</strong></span></a><a class="legal-back" href="/#latest">← Alle Nachrichten</a></div></header>
+    <header class="legal-header"><div class="shell legal-nav"><a class="brand" href="/" aria-label="HeuteBlick – Startseite"><span class="brand-mark" aria-hidden="true"><i></i></span><span class="brand-copy"><strong>HeuteBlick</strong></span></a><a class="legal-back" href="/#entdecken">← Alle Nachrichten</a></div></header>
     <main class="article-main shell" id="main-content"><article>
       <header class="article-header">
         <p class="eyebrow dark"><span></span> QUELLENMONITOR</p>
-        <div class="article-status-row"><strong>Mehrfach belegt</strong><span>{source_count} getrennte Herausgeber verglichen</span></div>
+        <div class="article-status-row"><strong>Mehrfach berichtet</strong><span>{source_count} Herausgeber verglichen</span></div>
         <h1>{escape(title)}</h1>
         <p class="article-deck">{escape(summary)}</p>
-        <div class="article-byline"><span>Redaktion Weltbeobachter</span><span>Veröffentlicht: {escape(format_time(now))}</span><span>Prüfzeitraum: letzte 32 Stunden</span></div>
+        <div class="article-byline"><span>Redaktion HeuteBlick</span><span>Veröffentlicht: {escape(format_time(now))}</span><span>Prüfzeitraum: letzte 32 Stunden</span></div>
       </header>
-      <figure class="article-hero-figure"><img src="{IMAGE}" alt="{escape(IMAGE_ALT)}" width="1536" height="1024" /><figcaption><strong>Redaktionelle Symbolillustration:</strong> Die KI-generierte Weltkarte zeigt kein tatsächliches Ereignis. Quelle: Weltbeobachter/OpenAI; eigenes Werk des Betreibers.</figcaption></figure>
+      <figure class="article-hero-figure"><img src="{IMAGE}" alt="{escape(IMAGE_ALT)}" width="1536" height="1024" /><figcaption><strong>Redaktionelle Symbolillustration:</strong> Die KI-generierte Weltkarte zeigt kein tatsächliches Ereignis. Quelle: HeuteBlick/OpenAI; eigenes Werk des Betreibers.</figcaption></figure>
       <div class="article-content">
         <p><strong>Was dieser Überblick leistet:</strong> Der automatische Quellenmonitor bündelt ausschließlich Themen, über die mindestens zwei getrennte Nachrichtenherausgeber aktuell berichten. Er erstellt keine erfundenen Ergänzungen, übernimmt keine Meldung als alleinige Wahrheit und schließt sensible Themen aus der unbeaufsichtigten Veröffentlichung aus.</p>
         <p><strong>Was er nicht leistet:</strong> Eine Übereinstimmung mehrerer Überschriften ersetzt weder ein Primärdokument noch eine menschliche Vor-Ort-Recherche. Deshalb nennt jeder Abschnitt den Herausgeber und den im Google-News-RSS erfassten Meldungslink; weitergehende Details bleiben der Prüfung der Originalveröffentlichung vorbehalten.</p>
@@ -311,7 +354,7 @@ def article_html(groups: list[list[dict[str, object]]], now: dt.datetime, url: s
         <aside class="article-correction-note"><strong>Korrektur oder neuer Hinweis?</strong><p>Schreiben Sie der Redaktion mit der betroffenen Aussage und einer überprüfbaren Quelle.</p><a href="/kontakt">Redaktion kontaktieren →</a></aside>
       </div>
     </article></main>
-    <footer class="legal-footer"><div class="shell legal-footer-inner"><span>Weltbeobachter</span><nav aria-label="Rechtliche Navigation"><a href="/kontakt">Kontakt</a><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a><a href="/werbung">Werbung</a><a href="/redaktionsgrundsaetze">Redaktionsgrundsätze</a></nav></div></footer>
+    <footer class="legal-footer"><div class="shell legal-footer-inner"><span>HeuteBlick</span><nav aria-label="Rechtliche Navigation"><a href="/kontakt">Kontakt</a><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a><a href="/werbung">Werbung</a><a href="/redaktionsgrundsaetze">Redaktionsgrundsätze</a></nav></div></footer>
   </body>
 </html>
 """
@@ -345,7 +388,7 @@ def update_newsmap(url: str, title: str, now: dt.datetime) -> None:
     if url in text:
         return
     entry = (
-        f'<url><loc>{escape(url)}</loc><news:news><news:publication><news:name>Weltbeobachter</news:name>'
+        f'<url><loc>{escape(url)}</loc><news:news><news:publication><news:name>HeuteBlick</news:name>'
         f'<news:language>de</news:language></news:publication><news:publication_date>{now.isoformat(timespec="seconds")}'
         f'</news:publication_date><news:title>{escape(title)}</news:title></news:news></url>\n'
     )
@@ -356,6 +399,35 @@ def update_newsmap(url: str, title: str, now: dt.datetime) -> None:
         text[: opening.end()] + entry + text[opening.end() :],
         encoding="utf-8",
     )
+
+
+def prune_newsmap(now: dt.datetime) -> None:
+    """Keep only news published in the preceding 48 hours; retain archive URLs in sitemap.xml."""
+    ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9', 'n': 'http://www.google.com/schemas/sitemap-news/0.9'}
+    tree = ET.parse(NEWSMAP)
+    root = tree.getroot()
+    removed = False
+    for entry in list(root):
+        value = entry.findtext('n:news/n:publication_date', namespaces=ns)
+        try:
+            stamp = dt.datetime.fromisoformat(value or '')
+            keep = dt.timedelta(0) <= now - stamp <= dt.timedelta(hours=48)
+        except (ValueError, TypeError):
+            keep = False
+        if not keep:
+            root.remove(entry)
+            removed = True
+    if removed:
+        ET.register_namespace('', ns['s'])
+        ET.register_namespace('news', ns['n'])
+        ET.indent(tree, space='  ')
+        # Keep a newline after the opening root, including for an empty sitemap.
+        text = ET.tostring(root, encoding='unicode', short_empty_elements=False)
+        if '</urlset>' in text and '\n' not in text:
+            text = text.replace('</urlset>', '\n</urlset>')
+        if 'xmlns:news=' not in text:
+            text = text.replace('<urlset ', f'<urlset xmlns:news="{ns["n"]}" ', 1)
+        NEWSMAP.write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + text + '\n', encoding='utf-8')
 
 
 def validate_output(output: Path, url: str) -> None:
@@ -376,6 +448,8 @@ def main() -> int:
     args = parser.parse_args()
 
     now = now_berlin()
+    if not args.dry_run:
+        prune_newsmap(now)
     slug = f"quellenmonitor-{now:%Y-%m-%d}"
     output = ROOT / "welt" / slug / "index.html"
     if output.exists():
@@ -383,11 +457,24 @@ def main() -> int:
         return 0
 
     items: list[dict[str, object]] = []
-    for category, query in QUERIES:
+    successful_feeds = 0
+    try:
+        leads = trend_queries()
+        print(f'Google Trends DE: {len(leads)} category-matched leads')
+    except Exception as error:
+        print(f'Trend feed unavailable; using standing queries: {error}', file=sys.stderr)
+        leads = []
+    for category, query in (*leads, *QUERIES):
         try:
-            items.extend(parse_feed(category, query, now))
+            found = parse_feed(category, query, now)
+            items.extend(found)
+            successful_feeds += 1
+            print(f'{category}: {len(found)} eligible entries')
         except Exception as error:
             print(f"Feed error for {category}: {error}", file=sys.stderr)
+
+    if successful_feeds == 0:
+        raise RuntimeError('No news feed could be read; publication skipped.')
 
     state = load_state()
     used = {str(row.get("fingerprint")) for row in state["published"] if isinstance(row, dict)}
@@ -412,7 +499,7 @@ def main() -> int:
         {
             "id": slug,
             "url": f"/welt/{slug}",
-            "category": "Welt",
+            "category": "Trends",
             "title": title,
             "summary": summary,
             "tone": "world",

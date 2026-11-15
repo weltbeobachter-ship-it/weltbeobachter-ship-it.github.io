@@ -1274,6 +1274,19 @@ const menuButton = document.querySelector("#menu-button");
 const primaryNav = document.querySelector("#primary-nav");
 
 let activeFilter = "Alle";
+let visibleCount = 12;
+const guideEntries = typeof guideItems === "undefined" ? [] : guideItems;
+const feedStatus = document.querySelector("#feed-status");
+const moreNews = document.querySelector("#more-news");
+
+function articleDate(item) {
+  const [day, month, year] = (item.publishedAt || "").split(".").map(Number);
+  return Date.UTC(year, month - 1, day);
+}
+
+function isCurrent(item) {
+  return item.status === "Ratgeber" || (item.status === "Quellenmonitor" && Date.now() - articleDate(item) < 7 * 86400000);
+}
 
 function normalizeText(value) {
   return value
@@ -1339,21 +1352,26 @@ function cardTemplate(item, index) {
 
 function renderNews() {
   const query = normalizeText(searchInput.value);
-  const filtered = newsItems.filter((item) => {
+  const filtered = [...guideEntries, ...newsItems].filter((item) => {
     // Only fully edited articles with a local visual are part of the public feed.
     // Older automated short items remain archived, but are not promoted as newsroom content.
-    const isEditoriallyEligible = Boolean(item.image) && item.status !== "Automatisch geprüft";
-    const matchesFilter = activeFilter === "Alle" || item.category === activeFilter;
+    const archive = activeFilter === "Archiv";
+    const isEditoriallyEligible = archive ? !isCurrent(item) : isCurrent(item);
+    const matchesFilter = archive || activeFilter === "Alle" || item.category === activeFilter || (activeFilter === "Trends" && item.status === "Quellenmonitor");
     const haystack = normalizeText(`${item.category} ${item.title} ${item.summary}`);
     return isEditoriallyEligible && matchesFilter && (!query || haystack.includes(query));
   });
 
-  grid.innerHTML = filtered.map(cardTemplate).join("");
+  filtered.sort((a, b) => articleDate(b) - articleDate(a));
+  grid.innerHTML = filtered.slice(0, visibleCount).map(cardTemplate).join("");
   emptyState.hidden = filtered.length > 0;
+  if (moreNews) moreNews.hidden = filtered.length <= visibleCount;
+  if (feedStatus) feedStatus.textContent = `${filtered.length} Beiträge · ${activeFilter === "Archiv" ? "Archiv (ältere Veröffentlichungen)" : "Ratgeber und aktuelle Quellenübersichten"}`;
 }
 
 function setFilter(filter) {
   activeFilter = filter;
+  visibleCount = 12;
   filterButtons.forEach((button) => {
     const active = button.dataset.filter === filter;
     button.classList.toggle("is-active", active);
@@ -1363,6 +1381,7 @@ function setFilter(filter) {
 }
 
 function closeMenu() {
+  if (!primaryNav || !menuButton) return;
   primaryNav.classList.remove("is-open");
   menuButton.setAttribute("aria-expanded", "false");
   document.body.classList.remove("menu-open");
@@ -1378,8 +1397,10 @@ function updateDate() {
     timeZone: "Europe/Berlin"
   }).format(now);
 
-  document.querySelector("#current-date").textContent = `${formatted} · Deutschland`;
-  document.querySelector("#current-year").textContent = now.getFullYear();
+  const dateLabel = document.querySelector("#current-date");
+  const yearLabel = document.querySelector("#current-year");
+  if (dateLabel) dateLabel.textContent = formatted;
+  if (yearLabel) yearLabel.textContent = now.getFullYear();
 }
 
 filterButtons.forEach((button) => {
@@ -1393,22 +1414,23 @@ navFilters.forEach((link) => {
   });
 });
 
-searchInput.addEventListener("input", renderNews);
+searchInput?.addEventListener("input", () => { visibleCount = 12; renderNews(); });
+moreNews?.addEventListener("click", () => { visibleCount += 12; renderNews(); });
 
-clearSearch.addEventListener("click", () => {
+clearSearch?.addEventListener("click", () => {
   searchInput.value = "";
   setFilter("Alle");
   searchInput.focus();
 });
 
-menuButton.addEventListener("click", () => {
+menuButton?.addEventListener("click", () => {
   const open = !primaryNav.classList.contains("is-open");
   primaryNav.classList.toggle("is-open", open);
   menuButton.setAttribute("aria-expanded", String(open));
   document.body.classList.toggle("menu-open", open);
 });
 
-primaryNav.querySelectorAll("a").forEach((link) => {
+primaryNav?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
@@ -1417,4 +1439,4 @@ window.addEventListener("resize", () => {
 });
 
 updateDate();
-renderNews();
+if (grid && searchInput && emptyState) renderNews();
