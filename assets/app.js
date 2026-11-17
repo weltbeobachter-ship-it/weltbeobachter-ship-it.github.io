@@ -1,5 +1,21 @@
 const newsItems = [
   {
+    "id": "quellenmonitor-2026-11-18",
+    "url": "/welt/quellenmonitor-2026-11-18",
+    "category": "Trends",
+    "title": "Quellenmonitor vom 18. November 2026: 3 Themen im Vergleich",
+    "summary": "Aktuelle mehrfach berichtete Themen im transparenten Quellenvergleich – mit 8 getrennten Herausgebern, Meldungslinks und klaren Grenzen der automatischen Prüfung.",
+    "tone": "world",
+    "glyph": "◎",
+    "image": "/assets/hero-world-observatory.webp",
+    "imageAlt": "Redaktionelle Weltkarte mit Lichtpunkten als Symbol für den täglichen Quellenvergleich",
+    "featured": true,
+    "status": "Quellenmonitor",
+    "publishedAt": "18.11.2026",
+    "readTime": "6 Min.",
+    "verified": "8 Herausgeber verglichen"
+  },
+  {
     "id": "quellenmonitor-2026-11-17",
     "url": "/welt/quellenmonitor-2026-11-17",
     "category": "Trends",
