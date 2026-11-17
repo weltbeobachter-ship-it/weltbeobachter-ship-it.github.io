@@ -79,6 +79,27 @@
       "title": "Stahlgipfel: Branche dringt auf Entlastung beim Strompreis",
       "fingerprint": "9bfd434db8691115",
       "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-17T01:48:08+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-17",
+      "title": "Fußball heute: Nations League Tabelle 2026/27, wer ist im Viertelfinale?",
+      "fingerprint": "9c85b8a7e661dcc9",
+      "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-17T01:48:08+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-17",
+      "title": "Deutschland besiegt Niederlande mit 5:0 und erreicht Viertelfinale",
+      "fingerprint": "781d49df203c7d70",
+      "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-17T01:48:08+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-17",
+      "title": "Deutsche Telekom Aktie steigt gegen den Chip-Sturm: KI-Fabrik ausverkauft, Ausbau auf 20 Megawatt – Europas Nvidia-Profiteur ohne Nvidia-Risiko?",
+      "fingerprint": "88492cc028481aa2",
+      "kind": "daily-sources-monitor"
     }
   ]
 }
