@@ -142,6 +142,27 @@
       "title": "Endlich wieder Bundesliga",
       "fingerprint": "910a5f270c3d1217",
       "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-20T00:34:36+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-20",
+      "title": "Mistral AI: Deutsche Telekom investiert 100 Millionen Euro in KI-Start-up",
+      "fingerprint": "26fbdd05a461b11e",
+      "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-20T00:34:36+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-20",
+      "title": "Black Friday 2026: Amazon Black Weeks gestartet – welche Angebote gibt es?",
+      "fingerprint": "b1030fdf2d09be50",
+      "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-20T00:34:36+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-20",
+      "title": "Technik-Schnäppchen prüfen: So gelingt Black Friday",
+      "fingerprint": "84ce2d57aea0ae4a",
+      "kind": "daily-sources-monitor"
     }
   ]
 }
