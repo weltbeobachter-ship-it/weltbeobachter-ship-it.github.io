@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-<url><loc>https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-19</loc><news:news><news:publication><news:name>HeuteBlick</news:name><news:language>de</news:language></news:publication><news:publication_date>2026-11-19T00:23:11+01:00</news:publication_date><news:title>Quellenmonitor vom 19. November 2026: 3 Themen im Vergleich</news:title></news:news></url>
+  <url>
+    <loc>https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-19</loc>
+    <news:news>
+      <news:publication>
+        <news:name>HeuteBlick</news:name>
+        <news:language>de</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-19T00:23:11+01:00</news:publication_date>
+      <news:title>Quellenmonitor vom 19. November 2026: 3 Themen im Vergleich</news:title>
+    </news:news>
+  </url>
   <url>
     <loc>https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-18</loc>
     <news:news>
@@ -10,17 +20,6 @@
       </news:publication>
       <news:publication_date>2026-11-18T00:51:18+01:00</news:publication_date>
       <news:title>Quellenmonitor vom 18. November 2026: 3 Themen im Vergleich</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-17</loc>
-    <news:news>
-      <news:publication>
-        <news:name>HeuteBlick</news:name>
-        <news:language>de</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-17T01:48:08+01:00</news:publication_date>
-      <news:title>Quellenmonitor vom 17. November 2026: 3 Themen im Vergleich</news:title>
     </news:news>
   </url>
 </urlset>
