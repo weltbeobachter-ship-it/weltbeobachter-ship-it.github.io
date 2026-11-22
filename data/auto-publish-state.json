@@ -184,6 +184,27 @@
       "title": "Nations League Modus: So geht es nach der Auslosung weiter, wer steigt ab?",
       "fingerprint": "30b5a79b1d90d369",
       "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-22T14:19:48+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-22",
+      "title": "2. Fußball-Bundesliga: Energie Cottbus vs. Hertha: Das Derby im Liveticker und Audiostream",
+      "fingerprint": "8cd38c4ae2b5a5a2",
+      "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-22T14:19:48+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-22",
+      "title": "Fußball-Bundesliga: Plötzlich Erster: Kann der BVB die Bayern herausfordern?",
+      "fingerprint": "b2c8f46b4a26a4c2",
+      "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-22T14:19:48+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-22",
+      "title": "Diese Spiele werden heute live im Free-TV oder Stream übertragen",
+      "fingerprint": "1415bc97b8916398",
+      "kind": "daily-sources-monitor"
     }
   ]
 }
