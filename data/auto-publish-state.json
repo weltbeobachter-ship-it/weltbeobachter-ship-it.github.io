@@ -205,6 +205,27 @@
       "title": "Diese Spiele werden heute live im Free-TV oder Stream übertragen",
       "fingerprint": "1415bc97b8916398",
       "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-23T16:56:40+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-23",
+      "title": "Fußball-Bundesliga - Transfer-Coup: Nationaltorhüterin Berger wechselt zu Union - Sport - SZ.de",
+      "fingerprint": "64c6c9c316a7ac3e",
+      "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-23T16:56:40+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-23",
+      "title": "Bundesliga: Was Werder Bremen und Hamburger SV im Nordderby unterscheidet",
+      "fingerprint": "fb34273cb7d77fda",
+      "kind": "daily-sources-monitor"
+    },
+    {
+      "time": "2026-11-23T16:56:40+01:00",
+      "url": "https://weltbeobachter-ship-it.github.io/welt/quellenmonitor-2026-11-23",
+      "title": "Amazon Black Friday Woche am Montag: Diese Technik-Deals lohnen sich",
+      "fingerprint": "d0f44cf3538c0714",
+      "kind": "daily-sources-monitor"
     }
   ]
 }
